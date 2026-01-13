@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" class="chrometwo"><head><title>Release notes</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css"/><meta name="generator" content="publican v4.3.2"/><meta name="description" content="Review new features, known issues, and resolved issues for Migration Toolkit for Virtualization 2.10."/><link rel="next" href="#rn-2-10_release-notes" title="Chapter 1. Migration Toolkit for Virtualization 2.10"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type="text/javascript" src="Common_Content/scripts/jquery-1.7.1.min.js"> </script><script type="text/javascript" src="Common_Content/scripts/utils.js"> </script><script type="text/javascript" src="Common_Content/scripts/highlight.js/highlight.pack.js"> </script></head><body><div id="chrometwo"><div id="main"><div xml:lang="en-US" class="book" id="idm45201667496384"><div class="titlepage"><div><div class="producttitle"><span class="productname">Migration Toolkit for Virtualization</span> <span class="productnumber">2.10</span></div><div><h1 class="title">Release notes</h1></div><div><h2 class="subtitle">Release notes for the Migration Toolkit for Virtualization 2.10 release</h2></div><div><div xml:lang="en-US" class="authorgroup"><div class="author"><h3 class="author"><span class="firstname">Red Hat Modernization and Migration</span> <span class="surname">Documentation Team</span></h3><code class="email"><a class="email" href="mailto:ccs-mms-docs@redhat.com">ccs-mms-docs@redhat.com</a></code></div></div></div><div><a href="#idm45201648808272">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+				Review new features, known issues, and resolved issues for Migration Toolkit for Virtualization 2.10.
+			</div></div></div></div><hr/></div><div class="toc"><ul class="toc"><li><span class="chapter"><a href="#rn-2-10_release-notes">1. Migration Toolkit for Virtualization 2.10</a></span><ul><li><span class="section"><a href="#new-features-and-enhancements-2-10_release-notes">1.1. New features and enhancements</a></span></li><li><span class="section"><a href="#rn-resolved-issues_release-notes">1.2. Resolved issues</a></span><ul><li><span class="section"><a href="#resolved-issues-2-10-2_release-notes">1.2.1. Resolved issues 2.10.2</a></span></li><li><span class="section"><a href="#resolved-issues-2-10-1_release-notes">1.2.2. Resolved issues 2.10.1</a></span></li><li><span class="section"><a href="#resolved-issues-2-10-0_release-notes">1.2.3. Resolved issues 2.10.0</a></span></li></ul></li><li><span class="section"><a href="#known-issues-2-10_release-notes">1.3. Known issues</a></span></li></ul></li></ul></div><section class="chapter" id="rn-2-10_release-notes"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Migration Toolkit for Virtualization 2.10</h1></div></div></div><p class="_abstract _abstract">
+			The release notes describe technical changes, new features and enhancements, known issues, and resolved issues.
+		</p><section class="section" id="new-features-and-enhancements-2-10_release-notes"><div class="titlepage"><div><div><h2 class="title">1.1. New features and enhancements</h2></div></div></div><p class="_abstract _abstract">
+				Migration Toolkit for Virtualization (MTV) 2.10 introduces the following features and enhancements:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
+						In MTV 2.10.1, you can migrate VMs that are running on B-tree file systems (Btrfs) to OpenShift Virtualization with support for OS conversion.
+					</p><p class="simpara">
+						<a class="link" href="https://issues.redhat.com/browse/MTV-2260">(MTV-2260)</a>
+					</p></li><li class="listitem"><p class="simpara">
+						MTV 2.10.1 standardizes the API for <code class="literal">ForkliftController</code> global settings, now accepting only string values for feature flags, for example "true" and "false". This standard ensures consistency, clarity, and improved error handling, preventing errors caused by using boolean values instead of string values only for feature flags.
+					</p><p class="simpara">
+						<a class="link" href="https://issues.redhat.com/browse/MTV-3566">(MTV-3566)</a>
+					</p></li><li class="listitem">
+						In the MTV 2.10.0 UI, the Virtual Machines tab on the Plan Details page provides improved visibility of migration progress with a clearer page title label and a display of key events in logical order. You can also hide migration resources for a cleaner UI to assess the progress of your migration.
+					</li><li class="listitem"><p class="simpara">
+						In MTV 2.10.0, you can optimize the asynchronous input/output (AIO) buffer configuration for the VMware disk development kit (VDDK) directly in the MTV UI for cold migrations. AIO buffer configuration is deactivated by default, but you can activate the feature and customize the configuration in YAML to improve storage I/O operations and reduce latency when working with VDDK.
+					</p><p class="simpara">
+						<a class="link" href="https://issues.redhat.com/browse/MTV-2188">(MTV-2188)</a>
+					</p></li><li class="listitem">
+						In MTV 2.10.0, you can create network maps directly in the MTV UI by adding a source and target network on the Create network map page instead of writing a YAML file.
+					</li><li class="listitem"><p class="simpara">
+						In the MTV 2.10.0 UI, the Virtual Machines table in the Create migration plan wizard is enhanced to simplify navigation and provide a clearer view of selected VMs. With this update, you can bulk select VMs from the Virtual Machines table toolbar, switch between views of selected and unselected VMs, filter VMs by location, and manage columns.
+					</p><p class="simpara">
+						<a class="link" href="https://issues.redhat.com/browse/MTV-3058">(MTV-3058)</a>
+					</p></li><li class="listitem">
+						In MTV 2.10.0, you can find the status of cutover dates for warm migrations in the MTV UI. The cutover button is an icon in the UI for your migration plan that changes state when you set the date for a cutover so that you can easily identify if a cutover date is set.
+					</li><li class="listitem">
+						In MTV 2.10.0, the Migrations section on the Plan Details page is relabelled as Migration history. The Migration history section contains tooltips to provide contextual information and make the section more useful for migration monitoring and troubleshooting.
+					</li><li class="listitem">
+						MTV 2.10.0 introduces a formatting feature for VMware system serial numbers. System administrators can use the formatting feature for consistent and error-free system serial numbers and easier system identification during migrations and configurations.
+					</li><li class="listitem">
+						In MTV 2.10.0, you can customize the <code class="literal">nodeSelector</code> field and options for importer pods in the MTV UI, enhancing resource allocation, scheduling, and application performance. You can customize pod scheduling policies for importer pods to ensure that importer pods are scheduled on specific nodes for enhanced resource management and stability.
+					</li><li class="listitem"><p class="simpara">
+						MTV 2.10.0 supports the migration of Linux Unified Key Setup (LUKS) encrypted VMs by using Network Bound Disk Encryption (NBDE) with Clevis. With this update, you can migrate LUKS-encrypted VMs without rebooting the VMs to obtain a decryption key from the Clevis server. The Clevis server must be accessible from OpenShift.
+					</p><p class="simpara">
+						<a class="link" href="https://issues.redhat.com/browse/MTV-3395">(MTV-3395)</a>
+					</p></li><li class="listitem">
+						In MTV 2.10.0, the <code class="literal">insecureSkipVerify</code> flag is set by default for ESXi hosts in the MTV UI, simplifying migrations in environments with self-signed certificates. With this setting, the migration process bypasses SSL certificate validation, reducing potential errors caused by certificates while maintaining security.
+					</li><li class="listitem"><p class="simpara">
+						In MTV 2.10.0, you can configure VM scheduling preferences for migration plans in the MTV UI or the <code class="literal">Plan</code> Custom Resource (CR). You can add custom labels to migrated VMs, apply VM scheduling to specific nodes based on node labels, and implement affinity or anti-affinity rules for VMs against workloads or nodes. With this update, you can use the <code class="literal">TargetLabels</code>, <code class="literal">TargetNodeSelector</code>, and <code class="literal">TargetAffinity</code> fields to manage VM placement during migrations, improving resource utilization and operational compliance.
+					</p><p class="simpara">
+						<a class="link" href="https://issues.redhat.com/browse/MTV-2768">(MTV-2768)</a>
+					</p></li><li class="listitem"><p class="simpara">
+						In MTV 2.10.0, a <code class="literal">PreFlightInspection</code> during warm migration enables early detection of issues during guest conversion. If an issue is detected, the warm migration fails before VM shutdown, and users can adjust VM settings or skip guest conversion. Potential errors during the <code class="literal">PreFlightInspection</code> include the following:
+					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+								Missing LUKS passwords
+							</li><li class="listitem">
+								Unsupported OS
+							</li><li class="listitem"><p class="simpara">
+								Unsupported FS
+							</p><p class="simpara">
+								<a class="link" href="https://issues.redhat.com/browse/MTV-2427">(MTV-2427)</a>
+							</p></li></ul></div></li><li class="listitem">
+						<span class="strong strong"><strong>Technology Preview:</strong></span> In MTV 2.10.0, you can import Open Virtual Appliances (OVAs) directly from local machines to OpenShift Virtualization by uploading the OVAs to NFS through the web browser in the MTV UI. <a class="link" href="https://issues.redhat.com/browse/MTV-3371">(MTV-3371)</a>
+					</li><li class="listitem">
+						In MTV 2.10.0, you can set <code class="literal">useCompatibilityMode</code> to <code class="literal">true</code> or <code class="literal">false</code> in the Raw Copy Mode settings in the MTV UI. With this update, you can use compatibility devices when migrating source VMs, such as SATA bus, E1000E NICs, or USB, or you can use pre-installed VirtIO devices on source VMs. <a class="link" href="https://issues.redhat.com/browse/MTV-3006">(MTV-3006)</a>
+					</li><li class="listitem"><p class="simpara">
+						In MTV 2.10.0, you can migrate VMs to existing user-defined networks (UDNs). With this update, you can create UDNs and map a VM’s source network to the UDN, and you can preserve the static IP addresses of source VMs that have assigned IPs.
+					</p><p class="simpara">
+						<a class="link" href="https://issues.redhat.com/browse/MTV-2856">(MTV-2856)</a>
+					</p></li><li class="listitem"><p class="simpara">
+						<span class="strong strong"><strong>Technology Preview:</strong></span> In MTV 2.10.0, you can live migrate VMs from one OpenShift (OCP) cluster to another, minimizing downtime with the continuous availability of VMs during the migration process. With this update, MTV creates and maps resources from the source to the destination cluster and triggers the live migration, and OpenShift Virtualization CNV migrates the running VM.
+					</p><p class="simpara">
+						<a class="link" href="https://issues.redhat.com/browse/MTV-2040">(MTV-2040)</a>
+					</p></li><li class="listitem"><p class="simpara">
+						In MTV 2.10.0, the Storage Offload Copy feature is <span class="strong strong"><strong>Developer Preview</strong></span> for warm migrations and <span class="strong strong"><strong>Technology Preview</strong></span> for cold migrations. Storage Offload Copy accelerates disk transfer in the storage array by bypassing the network. With this update, you can create a snapshot and then copy the base disk while the VM is running. You can copy delta changes from a snapshot over the network after the base disk storage offload copy, minimizing the requirement for VM shutdowns.
+					</p><p class="simpara">
+						<a class="link" href="https://issues.redhat.com/browse/MTV-2637">(MTV-2637)</a>
+					</p></li><li class="listitem"><p class="simpara">
+						In the MTV 2.10.0 UI, you can automate the creation of VMware Virtual Disk Development Kit (VDDK) images from provided <code class="literal">s/tat.gz/tar.gz/</code> files to accelerate the transfer of virtual disks.
+					</p><p class="simpara">
+						<a class="link" href="https://issues.redhat.com/browse/MTV-1616">(MTV-1616)</a>
+					</p></li></ul></div></section><section class="section" id="rn-resolved-issues_release-notes"><div class="titlepage"><div><div><h2 class="title">1.2. Resolved issues</h2></div></div></div><p class="_abstract _abstract">
+				Migration Toolkit for Virtualization (MTV) 2.10 has the following resolved issues:
+			</p><section class="section" id="resolved-issues-2-10-2_release-notes"><div class="titlepage"><div><div><h3 class="title">1.2.1. Resolved issues 2.10.2</h3></div></div></div><div class="variablelist"><dl class="variablelist"><dt><span class="term">XCOPY usage detection during volume population</span></dt><dd><p class="simpara">
+								Before this update, there was no indication of whether Extended Copy (XCOPY) was used during volume population. When copying with <code class="literal">vmkfstools</code> falls back to host copy because of storage array configuration errors or network issues, users were unaware if XCOPY was in use or not. With this release, XCOPY usage detection is implemented in the <code class="literal">vmkfstools-wrapper</code> tool. As a result, users can now monitor whether XCOPY was used during volume population through the new <code class="literal">vsphere_xcopy_volume_populator_xcopy_used</code> metric.
+							</p><p class="simpara">
+								<a class="link" href="https://issues.redhat.com/browse/MTV-3090">MTV-3090</a>
+							</p></dd><dt><span class="term">Improved data transfer efficiency with FC prioritization</span></dt><dd><p class="simpara">
+								Before this update, host mapping prioritized iSCSI over FC when both were present. As a result, users experienced data transfer fallback to network copy when both FC and iSCSI adapters were online. With this release, FC adapters are checked before iSCSI for volume mapping. FC is prioritized over iSCSI for ESXi adapters, reducing potential network copy fallbacks and improving data transfer efficiency.
+							</p><p class="simpara">
+								<a class="link" href="https://issues.redhat.com/browse/MTV-3966">MTV-3966</a>
+							</p></dd><dt><span class="term">Resolved inspection pod failures during large-scale warm migrations</span></dt><dd><p class="simpara">
+								Before this update, inspection pod failures occurred during large-scale warm migrations because the parent backing of disks was missing. This update introduces a retry limit for obtaining the parent backing of disks during inspection. As a result, large-scale warm migrations complete successfully, reducing the occurrence of inspection pod failures and stalled pods during the <code class="literal">PreflightInspection</code> step.
+							</p><p class="simpara">
+								<a class="link" href="https://issues.redhat.com/browse/MTV-4059">MTV-4059</a>
+							</p></dd><dt><span class="term">Resolved certificate validation errors for VM migrations with pre-migration hooks</span></dt><dd><p class="simpara">
+								Before this update, the OpenShift Virtualization migration of VMs with pre-migration hooks caused migration plan failure in the Initialize phase because of certificate validation issues. With this update, certificate validation errors are resolved for migration of VMs with pre-migration hooks.
+							</p><p class="simpara">
+								<a class="link" href="https://issues.redhat.com/browse/MTV-2894">MTV-2894</a>
+							</p></dd></dl></div></section><section class="section" id="resolved-issues-2-10-1_release-notes"><div class="titlepage"><div><div><h3 class="title">1.2.2. Resolved issues 2.10.1</h3></div></div></div><div class="variablelist"><dl class="variablelist"><dt><span class="term">Migrations stalled when conversion pod and <code class="literal">forklift-controller</code> pod were on different networks</span></dt><dd><p class="simpara">
+								Before this update, migrations stalled when the conversion pod was on a different network than the <code class="literal">forklift-controller</code> pod. With this update, the network issue is resolved, and the <code class="literal">forklift-controller</code> can access the conversion pod to perform the migration.
+							</p><p class="simpara">
+								<a class="link" href="https://issues.redhat.com/browse/MTV-1324">MTV-1324</a>
+							</p></dd><dt><span class="term">Bundle creation includes <code class="literal">relatedImages</code> field</span></dt><dd><p class="simpara">
+								Before this update, the <code class="literal">relatedImages</code> field was missing from the generated CSV during the bundle creation for MTV 2.10.0. As a result, users could not use MTV in disconnected environments. With this update, bundle creation includes the <span class="emphasis"><em>relatedImages</em></span> field in the generated CSV, and you can use MTV in disconnected environments without manually adding the <code class="literal">relatedImages</code> field to the CSV.
+							</p><p class="simpara">
+								<a class="link" href="https://issues.redhat.com/browse/MTV-3558">MTV-3558</a>
+							</p></dd></dl></div></section><section class="section" id="resolved-issues-2-10-0_release-notes"><div class="titlepage"><div><div><h3 class="title">1.2.3. Resolved issues 2.10.0</h3></div></div></div><div class="variablelist"><dl class="variablelist"><dt><span class="term">User could not rename virtual machines to address naming conflicts before migration</span></dt><dd>
+								In previous versions of MTV, you could not rename virtual machines (VMs) from the source provider to address naming conflicts before the VMs were migrated to Red Hat OpenShift Virtualization. In this release of MTV, you can modify non-compliant VM names in the MTV UI during the migration process to address naming conflicts and ensure compatibility with OpenShift Virtualization naming conventions. <a class="link" href="https://issues.redhat.com/browse/MTV-2919">(MTV-2919)</a>
+							</dd><dt><span class="term">User experience was interrupted when adding a new target project to a migration plan</span></dt><dd>
+								In previous versions of MTV, you had to close the Create migration plan wizard in the MTV UI to add a new target project to your migration plan. In this release of MTV, the option to create a new project as a target for VMs in your migration plan is available in the Target project dropdown list on the General page of the Create migration plan wizard.
+							</dd><dt><span class="term">Power state of source VMs was preserved post-migration</span></dt><dd>
+								In previous versions of MTV, the power state of a source VM was preserved post-migration. In this release of MTV, you can set the power state of a migrated VM to <code class="literal">on</code>, <code class="literal">off</code>, or <code class="literal">auto</code>. For example, if you are migrating a VM that is running in the source environment, you can ensure that the VM is powered off post-migration to preserve startup dependencies between VMs. With this update, you can set the power state for the target VM in the MTV UI or by using the <code class="literal">powerState</code> field in the <code class="literal">spec.vms</code> section of the <code class="literal">Plan</code> Custom Resource (CR). The <code class="literal">auto</code> setting preserves the power state of the source VM. <a class="link" href="https://issues.redhat.com/browse/MTV-1312">(MTV-1312)</a>
+							</dd></dl></div></section></section><section class="section" id="known-issues-2-10_release-notes"><div class="titlepage"><div><div><h2 class="title">1.3. Known issues</h2></div></div></div><p class="_abstract _abstract">
+				Migration Toolkit for Virtualization (MTV) 2.10 has the following known issues:
+			</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Migration failures during warm migration from VMware with storage offload</span></dt><dd><p class="simpara">
+							Incorrect secret usage during warm migration from VMware with storage offload leads to migration failures with errors related to missing access keys.
+						</p><p class="simpara">
+							<span class="strong strong"><strong>Workaround:</strong></span> Use per-disk credentials for warm migrations from VMware with storage offload.
+						</p><p class="simpara">
+							<a class="link" href="https://issues.redhat.com/browse/MTV-4062">MTV-4062</a>
+						</p></dd><dt><span class="term">Raw Device Mapping files prevent <code class="literal">copyoffload</code> migration of NFS-based VMs</span></dt><dd><p class="simpara">
+							If you try to migrate an NFS-based VM by using the <code class="literal">copyoffload</code> method, the <code class="literal">vmkfstools</code> command-line utility attempts to use the fallback method because NFS is file-based. However, NFS datastores do not support Raw Device Mapping (RDM) pointer files, and <code class="literal">vmkfstools</code> creates RDM files as cloning targets.
+						</p><p class="simpara">
+							<span class="strong strong"><strong>Workaround:</strong></span> You can use one of the following migration methods to address the limitation:
+						</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+									Migrate the NFS-based VM to an iSCSI or FC datastore, and then use the <code class="literal">copyoffload</code> method to migrate the VM to OpenShift Virtualization.
+								</li><li class="listitem">
+									Migrate the VM to a local ESXi disk datastore, and then use the <code class="literal">copyoffload</code> fallback method to migrate the VM to OpenShift Virtualization.
+								</li><li class="listitem">
+									Use either the HTTP or VDDK method to migrate the VM to OpenShift Virtualization.
+								</li></ul></div></dd><dt><span class="term">Inaccurate <code class="literal">ConnectionTestFailed</code> error messages when creating an OVA provider</span></dt><dd><p class="simpara">
+							When you create an Open Virtual Appliance (OVA) provider in the MTV UI, <code class="literal">ConnectionTestFailed</code> error messages are displayed before the provider status changes to <code class="literal">Ready</code>. The error messages are misleading and do not accurately reflect the in-progress status of the connection.
+						</p><p class="simpara">
+							<a class="link" href="https://issues.redhat.com/browse/MTV-3613">(MTV-3613)</a>
+						</p></dd><dt><span class="term">VDDK image in <code class="literal">openshift-mtv</code> namespace</span></dt><dd><p class="simpara">
+							When you upload a VMware Virtual Disk Development Kit (VDDK) init image, the image URL is located in the <code class="literal">openshift-mtv</code> namespace. If you create a provider in a different namespace, there is an error when pulling the image.
+						</p><p class="simpara">
+							<a class="link" href="https://issues.redhat.com/browse/MTV-3673">(MTV-3673)</a>
+						</p></dd><dt><span class="term">Leftover PVCs consume resources in OVA migrations</span></dt><dd><p class="simpara">
+							During Open Virtual Appliance (OVA) migrations to OpenShift Virtualization, leftover <code class="literal">ova-store-pvc-*</code> Persistent Volume Claims (PVCs) are bound to the target cluster, consuming excess resources.
+						</p><p class="simpara">
+							<span class="strong strong"><strong>Workaround:</strong></span> Manually delete the leftover <code class="literal">ova-store-pvc-*</code> PVCs after migration by using the <code class="literal">oc delete pvc &lt;pvc_name&gt;</code> command. This action removes the excess resources, but data loss might occur.
+						</p><p class="simpara">
+							<a class="link" href="https://issues.redhat.com/browse/MTV-3659">(MTV-3659)</a>
+						</p></dd><dt><span class="term">VM migration from OVA to OpenShift Virtualization cluster causes loss of interface settings in VM YAML file</span></dt><dd><p class="simpara">
+							The migration of VMs with DHCP settings from an Open Virtual Appliance (OVA) provider to a OpenShift Virtualization cluster results in the loss of interface settings in the VM YAML file post-migration.
+						</p><p class="simpara">
+							<span class="strong strong"><strong>Workaround:</strong></span> Manually configure interfaces on the VM after migration.
+						</p><p class="simpara">
+							<a class="link" href="https://issues.redhat.com/browse/MTV-3654">(MTV-3654)</a>
+						</p></dd><dt><span class="term">Missing check for write permissions on OVA files for upload</span></dt><dd><p class="simpara">
+							When uploading an Open Virtual Appliance (OVA) file, the script does not check the write permissions for the destination directory before the upload, which can result in a permission denied error at the end of the upload process.
+						</p><p class="simpara">
+							<span class="strong strong"><strong>Workaround:</strong></span> Check the write permissions of the OVA file before initiating the upload. The write permissions allow MTV to complete the upload process without permissions errors.
+						</p><p class="simpara">
+							<a class="link" href="https://issues.redhat.com/browse/MTV-3634">(MTV-3634)</a>
+						</p></dd></dl></div></section></section><div><div xml:lang="en-US" class="legalnotice" id="idm45201648808272"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		Copyright <span class="trademark"/>© 2026 Red Hat, Inc.
+	</div><div class="para">
+		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri" href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
+	</div><div class="para">
+		Red Hat, as the licensor of this document, waives the right to enforce, and agrees not to assert, Section 4d of CC-BY-SA to the fullest extent permitted by applicable law.
+	</div><div class="para">
+		Red Hat, Red Hat Enterprise Linux, the Shadowman logo, the Red Hat logo, JBoss, OpenShift, Fedora, the Infinity logo, and RHCE are trademarks of Red Hat, Inc., registered in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Linux</span>® is the registered trademark of Linus Torvalds in the United States and other countries.
+	</div><div class="para">
+		<span class="trademark">Java</span>® is a registered trademark of Oracle and/or its affiliates.
+	</div><div class="para">
+		<span class="trademark">XFS</span>® is a trademark of Silicon Graphics International Corp. or its subsidiaries in the United States and/or other countries.
+	</div><div class="para">
+		<span class="trademark">MySQL</span>® is a registered trademark of MySQL AB in the United States, the European Union and other countries.
+	</div><div class="para">
+		<span class="trademark">Node.js</span>® is an official trademark of Joyent. Red Hat is not formally related to or endorsed by the official Joyent Node.js open source or commercial project.
+	</div><div class="para">
+		The <span class="trademark">OpenStack</span>® Word Mark and OpenStack logo are either registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation, in the United States and other countries and are used with the OpenStack Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.
+	</div><div class="para">
+		All other trademarks are the property of their respective owners.
+	</div></div></div></div></div></div><script type="text/javascript">
+                        jQuery(document).ready(function() {
+                            initSwitchery();
+                            jQuery('pre[class*="language-"]').each(function(i, block){hljs.highlightBlock(block);});
+                        });
+                    </script></body></html>

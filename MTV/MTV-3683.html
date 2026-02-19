@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" class="chrometwo"><head><title>Migrating your virtual machines to Red Hat OpenShift Virtualization</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css"/><meta name="generator" content="publican v4.3.2"/><meta name="description" content="Run your migration plan by using either the Migration Toolkit for Virtualization (MTV) user interface in the Red Hat OpenShift web console or the command-line interface."/><link rel="next" href="#con_performing-migration-intro_mtv" title="Chapter 1. Performing a migration"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type="text/javascript" src="Common_Content/scripts/jquery-1.7.1.min.js"> </script><script type="text/javascript" src="Common_Content/scripts/utils.js"> </script><script type="text/javascript" src="Common_Content/scripts/highlight.js/highlight.pack.js"> </script></head><body><div id="chrometwo"><div id="main"><div xml:lang="en-US" class="book" id="idm45215912177808"><div class="titlepage"><div><div class="producttitle"><span class="productname">Migration Toolkit for Virtualization</span> <span class="productnumber">2.10</span></div><div><h1 class="title">Migrating your virtual machines to Red Hat OpenShift Virtualization</h1></div><div><h2 class="subtitle">Migrating virtual machines from VMware vSphere, Red Hat Virtualization or OpenStack platforms, or other platforms to Red Hat OpenShift Virtualization by using the Migration Toolkit for Virtualization</h2></div><div><div xml:lang="en-US" class="authorgroup"><div class="author"><h3 class="author"><span class="firstname">Red Hat Modernization and Migration</span> <span class="surname">Documentation Team</span></h3><code class="email"><a class="email" href="mailto:ccs-mms-docs@redhat.com">ccs-mms-docs@redhat.com</a></code></div></div></div><div><a href="#idm45215904725248">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+<html xmlns="http://www.w3.org/1999/xhtml" class="chrometwo"><head><title>Migrating your virtual machines to Red Hat OpenShift Virtualization</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css"/><meta name="generator" content="publican v4.3.2"/><meta name="description" content="Run your migration plan by using either the Migration Toolkit for Virtualization (MTV) user interface in the Red Hat OpenShift web console or the command-line interface."/><link rel="next" href="#con_performing-migration-intro_mtv" title="Chapter 1. Performing a migration"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type="text/javascript" src="Common_Content/scripts/jquery-1.7.1.min.js"> </script><script type="text/javascript" src="Common_Content/scripts/utils.js"> </script><script type="text/javascript" src="Common_Content/scripts/highlight.js/highlight.pack.js"> </script></head><body><div id="chrometwo"><div id="main"><div xml:lang="en-US" class="book" id="idm44898787213024"><div class="titlepage"><div><div class="producttitle"><span class="productname">Migration Toolkit for Virtualization</span> <span class="productnumber">2.10</span></div><div><h1 class="title">Migrating your virtual machines to Red Hat OpenShift Virtualization</h1></div><div><h2 class="subtitle">Migrating virtual machines from VMware vSphere, Red Hat Virtualization or OpenStack platforms, or other platforms to Red Hat OpenShift Virtualization by using the Migration Toolkit for Virtualization</h2></div><div><div xml:lang="en-US" class="authorgroup"><div class="author"><h3 class="author"><span class="firstname">Red Hat Modernization and Migration</span> <span class="surname">Documentation Team</span></h3><code class="email"><a class="email" href="mailto:ccs-mms-docs@redhat.com">ccs-mms-docs@redhat.com</a></code></div></div></div><div><a href="#idm44898773621920">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
 				Run your migration plan by using either the Migration Toolkit for Virtualization (MTV) user interface in the Red Hat OpenShift web console or the command-line interface.
 			</div></div></div></div><hr/></div><div class="toc"><ul class="toc"><li><span class="chapter"><a href="#con_performing-migration-intro_mtv">1. Performing a migration</a></span></li><li><span class="chapter"><a href="#assembly_migrating-from-vmware_mtv">2. Migrating from VMware vSphere</a></span><ul><li><span class="section"><a href="#prerequisites">2.1. Prerequisites</a></span></li><li><span class="section"><a href="#running-migration-plan_vmware">2.2. Running a migration plan in the MTV UI</a></span><ul><li><span class="section"><a href="#migration-plan-options-ui_vmware">2.2.1. Migration plan options</a></span></li><li><span class="section"><a href="#canceling-migration-ui_vmware">2.2.2. Canceling a migration</a></span></li></ul></li><li><span class="section"><a href="#proc_migrating-vms-cli-vmware_vmware">2.3. Running a VMware vSphere migration from the command-line</a></span></li><li><span class="section"><a href="#proc_storage-copy-offload-cli_vmware">2.4. Running a VMware vSphere migration from the command-line by using storage copy offload</a></span><ul><li><span class="section"><a href="#retrieving-vmware-moref_vmware">2.4.1. Retrieving a VMware vSphere moRef</a></span></li><li><span class="section"><a href="#mtv-shared-disks_vmware">2.4.2. Migrating virtual machines with shared disks</a></span></li><li><span class="section"><a href="#mtv-template-utility_vmware">2.4.3. MTV template utility for VMware VM names</a></span></li><li><span class="section"><a href="#canceling-migration-cli_vmware">2.4.4. Canceling a migration from the command-line interface</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#assembly_migrating-from-rhv_mtv">3. Migrating from Red Hat Virtualization</a></span><ul><li><span class="section"><a href="#prerequisites_2">3.1. Prerequisites</a></span></li><li><span class="section"><a href="#running-migration-plan_rhv">3.2. Running a migration plan in the MTV UI</a></span><ul><li><span class="section"><a href="#migration-plan-options-ui_rhv">3.2.1. Migration plan options</a></span></li><li><span class="section"><a href="#canceling-migration-ui_rhv">3.2.2. Canceling a migration</a></span></li></ul></li><li><span class="section"><a href="#proc_migrating-vms-cli-rhv_rhv">3.3. Running a Red Hat Virtualization migration from the command-line</a></span><ul><li><span class="section"><a href="#canceling-migration-cli_rhv">3.3.1. Canceling a migration from the command-line interface</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#assembly_migrating-from-osp_mtv">4. Migrating from OpenStack</a></span><ul><li><span class="section"><a href="#prerequisites_3">4.1. Prerequisites</a></span></li><li><span class="section"><a href="#running-migration-plan_ostack">4.2. Running a migration plan in the MTV UI</a></span><ul><li><span class="section"><a href="#migration-plan-options-ui_ostack">4.2.1. Migration plan options</a></span></li><li><span class="section"><a href="#canceling-migration-ui_ostack">4.2.2. Canceling a migration</a></span></li></ul></li><li><span class="section"><a href="#proc_migrating-vms-cli-ostack_ostack">4.3. Running an OpenStack migration from the command-line</a></span><ul><li><span class="section"><a href="#canceling-migration-cli_ostack">4.3.1. Canceling a migration from the command-line interface</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#assembly_migrating-from-ova_mtv">5. Migrating from OVA</a></span><ul><li><span class="section"><a href="#prerequisites_4">5.1. Prerequisites</a></span></li><li><span class="section"><a href="#running-migration-plan_ova">5.2. Running a migration plan in the MTV UI</a></span><ul><li><span class="section"><a href="#migration-plan-options-ui_ova">5.2.1. Migration plan options</a></span></li><li><span class="section"><a href="#canceling-migration-ui_ova">5.2.2. Canceling a migration</a></span></li></ul></li><li><span class="section"><a href="#proc_migrating-vms-cli-ova_ova">5.3. Running an Open Virtual Appliance (OVA) migration from the command-line</a></span><ul><li><span class="section"><a href="#canceling-migration-cli_ova">5.3.1. Canceling a migration from the command-line interface</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#assembly_migrating-from-virt_mtv">6. Migrating from OpenShift Virtualization</a></span><ul><li><span class="section"><a href="#prerequisites_5">6.1. Prerequisites</a></span></li><li><span class="section"><a href="#running-migration-plan_cnv">6.2. Running a migration plan in the MTV UI</a></span><ul><li><span class="section"><a href="#migration-plan-options-ui_cnv">6.2.1. Migration plan options</a></span></li><li><span class="section"><a href="#canceling-migration-ui_cnv">6.2.2. Canceling a migration</a></span></li></ul></li><li><span class="section"><a href="#proc_migrating-vms-cli-cnv_cnv">6.3. Running a Red Hat OpenShift Virtualization migration from the command-line</a></span></li><li><span class="section"><a href="#migrating-live-cnv-cnv-vms-cli_cnv">6.4. Running a Red Hat OpenShift Virtualization live migration from the command-line</a></span><ul><li><span class="section"><a href="#canceling-migration-cli_cnv">6.4.1. Canceling a migration from the command-line interface</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#assembly_advanced-migration-options_mtv">7. Advanced migration options</a></span><ul><li><span class="section"><a href="#changing-precopy-intervals_mtv">7.1. Changing precopy intervals for warm migration</a></span></li><li><span class="section"><a href="#con_creating-custom-rules-validation_mtv">7.2. Creating custom rules for the Validation service</a></span><ul><li><span class="section"><a href="#about-rego-files_mtv">7.2.1. About Rego files</a></span></li><li><span class="section"><a href="#accessing-default-validation-rules_mtv">7.2.2. Checking the default validation rules</a></span></li><li><span class="section"><a href="#proc_creating-validation-rules_mtv">7.2.3. Creating validation rules</a></span></li><li><span class="section"><a href="#updating-inventory-rules-version_mtv">7.2.4. Updating the inventory rules version</a></span></li><li><span class="section"><a href="#retrieving-validation-service-json_mtv">7.2.5. Retrieving the Inventory service JSON</a></span></li></ul></li><li><span class="section"><a href="#about-hooks-for-migration-plans_mtv">7.3. About hooks for MTV migration plans</a></span><ul><li><span class="section"><a href="#migration-hook-workflow_mtv">7.3.1. Migration hook workflow</a></span></li><li><span class="section"><a href="#adding-migration-hook-via-ui_mtv">7.3.2. Adding a migration hook to a migration plan using the Red Hat OpenShift web console</a></span></li><li><span class="section"><a href="#adding-migration-hook-via-cli_mtv">7.3.3. Adding a migration hook to a migration plan using the CLI</a></span></li></ul></li><li><span class="section"><a href="#about-udn_mtv">7.4. About user defined networks</a></span></li><li><span class="section"><a href="#con_scheduling-target-vms-intro_mtv">7.5. Scheduling target VMs</a></span><ul><li><span class="section"><a href="#about-configuring-target-vm-scheduling_mtv">7.5.1. About scheduling target VMs</a></span></li><li><span class="section"><a href="#target-vm-scheduling-prerequisites_mtv">7.5.2. Target VM scheduling prerequisites</a></span></li><li><span class="section"><a href="#target-vm-scheduling-options_mtv">7.5.3. Target VM scheduling options</a></span></li><li><span class="section"><a href="#configuring-target-vm-scheduling-cli_mtv">7.5.4. Scheduling target VMs from the command-line interface</a></span></li><li><span class="section"><a href="#configuring-target-vm-scheduling-ui_mtv">7.5.5. Scheduling target VMs from the user interface</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#assembly_upgrading-uninstalling-mtv_mtv">8. Upgrading or uninstalling the Migration Toolkit for Virtualization</a></span><ul><li><span class="section"><a href="#upgrading-mtv-ui_mtv">8.1. Upgrading the Migration Toolkit for Virtualization</a></span></li><li><span class="section"><a href="#uninstalling-mtv-ui_mtv">8.2. Uninstalling MTV by using the Red Hat OpenShift web console</a></span></li><li><span class="section"><a href="#uninstalling-mtv-cli_mtv">8.3. Uninstalling MTV from the command line</a></span></li></ul></li><li><span class="chapter"><a href="#assembly_understanding-mtv-migration_mtv">9. Understanding MTV migration</a></span><ul><li><span class="section"><a href="#mtv-resources-and-services_mtv">9.1. MTV custom resources and services</a></span><ul><li><span class="section"><a href="#mtv_custom_resources">9.1.1. MTV custom resources</a></span></li><li><span class="section"><a href="#mtv_services">9.1.2. MTV services</a></span></li></ul></li><li><span class="section"><a href="#mtv-workflow_mtv">9.2. High-level migration workflow</a></span><ul><li><span class="section"><a href="#virt-migration-workflow_mtv">9.2.1. Detailed migration workflows</a></span></li><li><span class="section"><a href="#virt-v2v-mtv_mtv">9.2.2. How MTV uses the virt-v2v tool</a></span></li><li><span class="section"><a href="#raw-copy-mode_mtv">9.2.3. Raw copy mode</a></span></li><li><span class="section"><a href="#con_device-compatibility-mode-raw-copy-migrations_mtv">9.2.4. Device compatibility mode for raw copy migrations</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#assembly_troubleshooting-migration_mtv">10. Troubleshooting migration</a></span><ul><li><span class="section"><a href="#proc_troubleshooting-workflow_mtv">10.1. Troubleshooting workflow</a></span></li><li><span class="section"><a href="#con_common-migration-issues_mtv">10.2. Common migration issues</a></span></li><li><span class="section"><a href="#error-messages_mtv">10.3. Error messages</a></span><ul><li><span class="section"><a href="#proc_troubleshooting-warm-import-retry-limit_mtv">10.3.1. Resolving warm import retry limit errors</a></span></li><li><span class="section"><a href="#proc_troubleshooting-resize-disk-image_mtv">10.3.2. Resolving disk resize errors</a></span></li><li><span class="section"><a href="#proc_troubleshooting-connection-test-failed-ova_mtv">10.3.3. Resolving OVA connection test errors</a></span></li><li><span class="section"><a href="#proc_troubleshooting-vddk-image-pull-error_mtv">10.3.4. Resolving VDDK image pull errors</a></span></li><li><span class="section"><a href="#proc_troubleshooting-vddk-required-vsan_mtv">10.3.5. Resolving VDDK vSAN errors</a></span></li></ul></li><li><span class="section"><a href="#con_troubleshooting-storage-copy-offload_mtv">10.4. Troubleshooting storage copy offload</a></span><ul><li><span class="section"><a href="#sco-vsphere-esxi-connectivity_mtv">10.4.1. vSphere-ESXi connectivity issues</a></span></li><li><span class="section"><a href="#sco-ssh-issues_mtv">10.4.2. SSH error messages</a></span></li><li><span class="section"><a href="#sco-netapp-issues_mtv">10.4.3. NetApp Error</a></span></li></ul></li><li><span class="section"><a href="#using-must-gather_mtv">10.5. Using the must-gather tool</a></span></li><li><span class="section"><a href="#collected-logs-cr-info_mtv">10.6. Collected logs and custom resource information</a></span><ul><li><span class="section"><a href="#accessing-logs-ui_mtv">10.6.1. Downloading logs and custom resource information from the web console</a></span></li><li><span class="section"><a href="#accessing-logs-cli_mtv">10.6.2. Accessing logs and custom resource information from the command line</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#assembly_mtv-performance-recommendations_mtv">11. MTV performance recommendations</a></span><ul><li><span class="section"><a href="#ref_fast-storage-network-speeds_mtv">11.1. Ensure fast storage and network speeds</a></span></li><li><span class="section"><a href="#ref_fast-datastore-read-speeds_mtv">11.2. Ensure fast datastore read speeds to ensure efficient and performant migrations</a></span></li><li><span class="section"><a href="#ref_endpoint-types_mtv">11.3. Endpoint types</a></span></li><li><span class="section"><a href="#mtv-esxi-performance_mtv">11.4. ESXi performance</a></span><ul><li><span class="section"><a href="#mtv-single-esxi-host-performance_mtv">11.4.1. Single ESXi host performance</a></span></li><li><span class="section"><a href="#mtv-multiple-esxi-host-performance_mtv">11.4.2. Multiple ESXi hosts and a single data store</a></span></li></ul></li><li><span class="section"><a href="#mtv-different-migration-network-performances_mtv">11.5. Performance using different migration networks</a></span></li><li><span class="section"><a href="#ref_avoid-network-load_mtv">11.6. Avoid additional network load on VMware networks</a></span></li><li><span class="section"><a href="#ref_control-concurrent-disk-migrations_mtv">11.7. Control maximum concurrent disk migrations per ESXi host</a></span></li><li><span class="section"><a href="#ref_concurrent-migrations-faster-migrations_mtv">11.8. Migrations are completed faster when migrating multiple VMs concurrently</a></span></li><li><span class="section"><a href="#ref_multiple-hosts-faster-migrations_mtv">11.9. Migrations complete faster using multiple hosts</a></span></li><li><span class="section"><a href="#ref_multiple-migration-plans-vs-single_mtv">11.10. Multiple migration plans compared to a single large migration plan</a></span></li><li><span class="section"><a href="#ref_maximum-values-cold-migrations_mtv">11.11. Maximum values tested for cold migrations</a></span></li><li><span class="section"><a href="#ref_warm-migration-recommendations_mtv">11.12. Warm migration recommendations</a></span></li><li><span class="section"><a href="#ref_maximum-values-warm-migrations_mtv">11.13. Maximum values tested for warm migrations</a></span></li><li><span class="section"><a href="#ref_migrating-vms-large-disks_mtv">11.14. Recommendations for migrating VMs with large disks</a></span></li><li><span class="section"><a href="#mtv-aio-buffer_mtv">11.15. Increasing AIO sizes and buffer counts for NBD transport mode</a></span><ul><li><span class="section"><a href="#mtv-aio-buffer-key-findings_mtv">11.15.1. Key findings</a></span></li><li><span class="section"><a href="#mtv-aio-buffer-key-requirements_mtv">11.15.2. Key requirements for support for AIO sizes and buffer counts</a></span></li><li><span class="section"><a href="#mtv-enable-aio-buffer_mtv">11.15.3. Enabling and configuring AIO buffering</a></span></li><li><span class="section"><a href="#mtv-disable-aio-buffer_mtv">11.15.4. Disabling AIO buffering</a></span></li></ul></li><li><span class="section"><a href="#mtv-performance-addendum_mtv">11.16. MTV performance addendum</a></span></li></ul></li><li><span class="chapter"><a href="#mtv-telemetry_mtv">12. Telemetry</a></span></li></ul></div><section class="chapter" id="con_performing-migration-intro_mtv"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Performing a migration</h1></div></div></div><p class="_abstract _abstract">
 			When you have planned your migration by using the Migration Toolkit for Virtualization (MTV), you can migrate virtual machines from the following source providers to OpenShift Virtualization destination providers:
@@ -337,75 +337,75 @@ EOF</pre><p class="simpara">
 									Storage copy offload is a feature that allows you to migrate VMware virtual machines (VMs) that are in a storage array network (SAN) more efficiently. This feature makes use of the command <code class="literal">vmkfstools</code> on the ESXi host, which invokes the <code class="literal">XCOPY</code> command on the storage array using an Internet Small Computer Systems Interface (iSCSI) or Fibre Channel (FC) connection. Storage copy offload lets you copy data inside a SAN more efficiently than copying the data over a network. Storage copy offload is available as a Technology Preview feature for Migration Toolkit for Virtualization (MTV) 2.10 for cold migration and as a Developer Preview feature for warm migration. For more information, see <a class="link" href="https://docs.redhat.com/en/documentation/migration_toolkit_for_virtualization/2.10/html/planning_your_migration_to_red_hat_openshift_virtualization/assembly_planning-migration-vmware#about-storage-copy-offload_vmware">Migrating VMware virtual machines by using storage copy offload</a>
 								</p></dd><dt><span class="term"><code class="literal">&lt;source_datastore&gt;</code></span></dt><dd><p class="simpara">
 									Specifies the VMware vSphere datastore moRef. For example, <code class="literal">f2737930-b567-451a-9ceb-2887f6207009</code>. To retrieve the moRef, see <a class="link" href="#retrieving-vmware-moref_vmware" title="2.4.1. Retrieving a VMware vSphere moRef">Retrieving a VMware vSphere moRef</a>.
-								</p><div class="table" id="idm45215911571664"><p class="title"><strong>Table 2.1. Storage copy offload only: Supported storage vendors and their identifying strings in the CLI</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th style="text-align: left; vertical-align: top; " id="idm45215911566752" scope="col">Vendor</th><th style="text-align: left; vertical-align: top; " id="idm45215905235216" scope="col">Identifying string (Value of <code class="literal">storageVendorProduct</code> label)</th></tr></thead><tbody><tr><td style="text-align: left; vertical-align: top; " headers="idm45215911566752">
+								</p><div class="table" id="idm44898785667120"><p class="title"><strong>Table 2.1. Storage copy offload only: Supported storage vendors and their identifying strings in the CLI</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th style="text-align: left; vertical-align: top; " id="idm44898785331104" scope="col">Vendor</th><th style="text-align: left; vertical-align: top; " id="idm44898785330016" scope="col">Identifying string (Value of <code class="literal">storageVendorProduct</code> label)</th></tr></thead><tbody><tr><td style="text-align: left; vertical-align: top; " headers="idm44898785331104">
 												<p>
 													Hitachi Vantara
 												</p>
-												</td><td style="text-align: left; vertical-align: top; " headers="idm45215905235216">
+												</td><td style="text-align: left; vertical-align: top; " headers="idm44898785330016">
 												<p>
 													<code class="literal">vantara</code>
 												</p>
-												</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm45215911566752">
+												</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm44898785331104">
 												<p>
 													NetApp
 												</p>
-												</td><td style="text-align: left; vertical-align: top; " headers="idm45215905235216">
+												</td><td style="text-align: left; vertical-align: top; " headers="idm44898785330016">
 												<p>
 													<code class="literal">ontap</code>
 												</p>
-												</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm45215911566752">
+												</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm44898785331104">
 												<p>
 													Hewlett Packard Enterprise
 												</p>
-												</td><td style="text-align: left; vertical-align: top; " headers="idm45215905235216">
+												</td><td style="text-align: left; vertical-align: top; " headers="idm44898785330016">
 												<p>
 													<code class="literal">primera3par</code>
 												</p>
-												</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm45215911566752">
+												</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm44898785331104">
 												<p>
 													Pure Storage
 												</p>
-												</td><td style="text-align: left; vertical-align: top; " headers="idm45215905235216">
+												</td><td style="text-align: left; vertical-align: top; " headers="idm44898785330016">
 												<p>
 													<code class="literal">pureFlashArray</code>
 												</p>
-												</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm45215911566752">
+												</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm44898785331104">
 												<p>
 													Dell (PowerFlex)
 												</p>
-												</td><td style="text-align: left; vertical-align: top; " headers="idm45215905235216">
+												</td><td style="text-align: left; vertical-align: top; " headers="idm44898785330016">
 												<p>
 													<code class="literal">powerflex</code>
 												</p>
-												</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm45215911566752">
+												</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm44898785331104">
 												<p>
 													Dell (PowerMax)
 												</p>
-												</td><td style="text-align: left; vertical-align: top; " headers="idm45215905235216">
+												</td><td style="text-align: left; vertical-align: top; " headers="idm44898785330016">
 												<p>
 													<code class="literal">powermax</code>
 												</p>
-												</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm45215911566752">
+												</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm44898785331104">
 												<p>
 													Dell (PowerStore)
 												</p>
-												</td><td style="text-align: left; vertical-align: top; " headers="idm45215905235216">
+												</td><td style="text-align: left; vertical-align: top; " headers="idm44898785330016">
 												<p>
 													<code class="literal">powerstore</code>
 												</p>
-												</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm45215911566752">
+												</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm44898785331104">
 												<p>
 													Infinidat
 												</p>
-												</td><td style="text-align: left; vertical-align: top; " headers="idm45215905235216">
+												</td><td style="text-align: left; vertical-align: top; " headers="idm44898785330016">
 												<p>
 													<code class="literal">infinibox</code>
 												</p>
-												</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm45215911566752">
+												</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm44898785331104">
 												<p>
 													IBM
 												</p>
-												</td><td style="text-align: left; vertical-align: top; " headers="idm45215905235216">
+												</td><td style="text-align: left; vertical-align: top; " headers="idm44898785330016">
 												<p>
 													<code class="literal">flashsystem</code>
 												</p>
@@ -686,739 +686,739 @@ EOF</pre><div class="admonition note"><div class="admonition_header">Note</div><
 						In the MTV Operator, set the value of <code class="literal">feature_copy_offload</code> to <code class="literal">true</code> in <code class="literal">forklift-controller</code> by running the following command:
 					</p><pre class="programlisting language-terminal">oc patch forkliftcontrollers.forklift.konveyor.io forklift-controller --type merge -p '{"spec": {"feature_copy_offload": "true"}}' -n openshift-mtv</pre></li><li class="listitem"><p class="simpara">
 						Create a <code class="literal">Secret</code> in the namespace in which the migration provider is set up, usually <code class="literal">openshift-mtv</code>. Include the credentials from the appropriate vendor in your <code class="literal">Secret</code>.
-					</p><div class="table" id="idm45215917020704"><p class="title"><strong>Table 2.2. Credentials for a Hitachi Vantara storage copy offload Secret</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 22%; " class="col_1"/><col style="width: 48%; " class="col_2"/><col style="width: 15%; " class="col_3"/><col style="width: 15%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm45215914986944" scope="col">Key</th><th align="left" valign="top" id="idm45215914985856" scope="col">Description</th><th align="left" valign="top" id="idm45215914984768" scope="col">Mandatory?</th><th align="left" valign="top" id="idm45215914983680" scope="col">Default</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45215914986944">
+					</p><div class="table" id="idm44898781859312"><p class="title"><strong>Table 2.2. Credentials for a Hitachi Vantara storage copy offload Secret</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 22%; " class="col_1"/><col style="width: 48%; " class="col_2"/><col style="width: 15%; " class="col_3"/><col style="width: 15%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm44898780508816" scope="col">Key</th><th align="left" valign="top" id="idm44898780507728" scope="col">Description</th><th align="left" valign="top" id="idm44898780506640" scope="col">Mandatory?</th><th align="left" valign="top" id="idm44898781786064" scope="col">Default</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm44898780508816">
 									<p>
 										<code class="literal">GOVMOMI_HOSTNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914985856">
+									</td><td align="left" valign="top" headers="idm44898780507728">
 									<p>
 										hostname or URL of the vSphere API (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914984768">
+									</td><td align="left" valign="top" headers="idm44898780506640">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914983680">
+									</td><td align="left" valign="top" headers="idm44898781786064">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215914986944">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898780508816">
 									<p>
 										<code class="literal">GOVMOMI_USERNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914985856">
+									</td><td align="left" valign="top" headers="idm44898780507728">
 									<p>
 										User name of the vSphere API (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914984768">
+									</td><td align="left" valign="top" headers="idm44898780506640">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914983680">
+									</td><td align="left" valign="top" headers="idm44898781786064">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215914986944">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898780508816">
 									<p>
 										<code class="literal">GOVMOMI_PASSWORD</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914985856">
+									</td><td align="left" valign="top" headers="idm44898780507728">
 									<p>
 										Password of the vSphere API (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914984768">
+									</td><td align="left" valign="top" headers="idm44898780506640">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914983680">
+									</td><td align="left" valign="top" headers="idm44898781786064">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215914986944">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898780508816">
 									<p>
 										<code class="literal">STORAGE_HOSTNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914985856">
+									</td><td align="left" valign="top" headers="idm44898780507728">
 									<p>
 										The hostname or URL of the storage vendor API (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914984768">
+									</td><td align="left" valign="top" headers="idm44898780506640">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914983680">
+									</td><td align="left" valign="top" headers="idm44898781786064">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215914986944">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898780508816">
 									<p>
 										<code class="literal">STORAGE_USERNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914985856">
+									</td><td align="left" valign="top" headers="idm44898780507728">
 									<p>
 										The username of the storage vendor API (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914984768">
+									</td><td align="left" valign="top" headers="idm44898780506640">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914983680">
+									</td><td align="left" valign="top" headers="idm44898781786064">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215914986944">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898780508816">
 									<p>
 										<code class="literal">STORAGE_PASSWORD</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914985856">
+									</td><td align="left" valign="top" headers="idm44898780507728">
 									<p>
 										The password of the storage vendor API (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914984768">
+									</td><td align="left" valign="top" headers="idm44898780506640">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914983680">
+									</td><td align="left" valign="top" headers="idm44898781786064">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215914986944">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898780508816">
 									<p>
 										<code class="literal">STORAGE_PORT</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914985856">
+									</td><td align="left" valign="top" headers="idm44898780507728">
 									<p>
 										The port of the storage vendor API (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914984768">
+									</td><td align="left" valign="top" headers="idm44898780506640">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914983680">
+									</td><td align="left" valign="top" headers="idm44898781786064">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215914986944">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898780508816">
 									<p>
 										<code class="literal">STORAGE_ID</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914985856">
+									</td><td align="left" valign="top" headers="idm44898780507728">
 									<p>
 										Storage array serial number (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914984768">
+									</td><td align="left" valign="top" headers="idm44898780506640">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914983680">
+									</td><td align="left" valign="top" headers="idm44898781786064">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215914986944">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898780508816">
 									<p>
 										<code class="literal">HOSTGROUP_ID_LIST</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914985856">
+									</td><td align="left" valign="top" headers="idm44898780507728">
 									<p>
 										List of IO ports and host group IDs, for example. <code class="literal">CL1-A,1:CL2-B,2:CL4-A,1:CL6-A,1</code>.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914984768">
+									</td><td align="left" valign="top" headers="idm44898780506640">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914983680">
+									</td><td align="left" valign="top" headers="idm44898781786064">
 									<p>
 										NA.
 									</p>
-									</td></tr></tbody></table></div></div><div class="table" id="idm45215911314736"><p class="title"><strong>Table 2.3. Credentials for a NetApp ONTAP storage copy offload Secret</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 22%; " class="col_1"/><col style="width: 48%; " class="col_2"/><col style="width: 15%; " class="col_3"/><col style="width: 15%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm45215910769808" scope="col">Key</th><th align="left" valign="top" id="idm45215913231376" scope="col">Description</th><th align="left" valign="top" id="idm45215913230288" scope="col">Mandatory?</th><th align="left" valign="top" id="idm45215913229200" scope="col">Default</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45215910769808">
+									</td></tr></tbody></table></div></div><div class="table" id="idm44898781754048"><p class="title"><strong>Table 2.3. Credentials for a NetApp ONTAP storage copy offload Secret</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 22%; " class="col_1"/><col style="width: 48%; " class="col_2"/><col style="width: 15%; " class="col_3"/><col style="width: 15%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm44898776701120" scope="col">Key</th><th align="left" valign="top" id="idm44898776700032" scope="col">Description</th><th align="left" valign="top" id="idm44898776698944" scope="col">Mandatory?</th><th align="left" valign="top" id="idm44898776697856" scope="col">Default</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm44898776701120">
 									<p>
 										<code class="literal">STORAGE_HOSTNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913231376">
+									</td><td align="left" valign="top" headers="idm44898776700032">
 									<p>
 										IP or URL of the host (string). Either enter the management IP for the entire cluster or enter a dedicated storage virtual machine management logical interface (SVM LIF).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913230288">
+									</td><td align="left" valign="top" headers="idm44898776698944">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913229200">
+									</td><td align="left" valign="top" headers="idm44898776697856">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215910769808">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898776701120">
 									<p>
 										<code class="literal">STORAGE_USERNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913231376">
+									</td><td align="left" valign="top" headers="idm44898776700032">
 									<p>
 										The user’s name (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913230288">
+									</td><td align="left" valign="top" headers="idm44898776698944">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913229200">
+									</td><td align="left" valign="top" headers="idm44898776697856">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215910769808">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898776701120">
 									<p>
 										<code class="literal">STORAGE_PASSWORD</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913231376">
+									</td><td align="left" valign="top" headers="idm44898776700032">
 									<p>
 										The user’s password (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913230288">
+									</td><td align="left" valign="top" headers="idm44898776698944">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913229200">
+									</td><td align="left" valign="top" headers="idm44898776697856">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215910769808">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898776701120">
 									<p>
 										<code class="literal">STORAGE_SKIP_SSL_VERIFICATION</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913231376">
+									</td><td align="left" valign="top" headers="idm44898776700032">
 									<p>
 										If set to <code class="literal">true</code>, SSL verification is not performed (<code class="literal">true</code>, <code class="literal">false</code>).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913230288">
+									</td><td align="left" valign="top" headers="idm44898776698944">
 									<p>
 										No.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913229200">
+									</td><td align="left" valign="top" headers="idm44898776697856">
 									<p>
 										<code class="literal">false</code>.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215910769808">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898776701120">
 									<p>
 										<code class="literal">ONTAP_SVM</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913231376">
+									</td><td align="left" valign="top" headers="idm44898776700032">
 									<p>
 										The storage virtual machine (SVM) to be used in all client interactions. It can be taken from <code class="literal">trident.netapp.io/v1/TridentBackend.config.ontap_config.svm</code> resource field.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913230288">
+									</td><td align="left" valign="top" headers="idm44898776698944">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913229200">
+									</td><td align="left" valign="top" headers="idm44898776697856">
 									<p>
 										NA.
 									</p>
-									</td></tr></tbody></table></div></div><div class="table" id="idm45215914812000"><p class="title"><strong>Table 2.4. Credentials for a Pure Storage FlashArray storage copy offload Secret</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 22%; " class="col_1"/><col style="width: 48%; " class="col_2"/><col style="width: 15%; " class="col_3"/><col style="width: 15%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm45215910980432" scope="col">Key</th><th align="left" valign="top" id="idm45215910979344" scope="col">Description</th><th align="left" valign="top" id="idm45215910978256" scope="col">Mandatory?</th><th align="left" valign="top" id="idm45215910977168" scope="col">Default</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45215910980432">
+									</td></tr></tbody></table></div></div><div class="table" id="idm44898786402800"><p class="title"><strong>Table 2.4. Credentials for a Pure Storage FlashArray storage copy offload Secret</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 22%; " class="col_1"/><col style="width: 48%; " class="col_2"/><col style="width: 15%; " class="col_3"/><col style="width: 15%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm44898780455360" scope="col">Key</th><th align="left" valign="top" id="idm44898780454272" scope="col">Description</th><th align="left" valign="top" id="idm44898780453184" scope="col">Mandatory?</th><th align="left" valign="top" id="idm44898780452096" scope="col">Default</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm44898780455360">
 									<p>
 										<code class="literal">STORAGE_HOSTNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910979344">
+									</td><td align="left" valign="top" headers="idm44898780454272">
 									<p>
 										IP or URL of the host (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910978256">
+									</td><td align="left" valign="top" headers="idm44898780453184">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910977168">
+									</td><td align="left" valign="top" headers="idm44898780452096">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215910980432">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898780455360">
 									<p>
 										<code class="literal">STORAGE_USERNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910979344">
+									</td><td align="left" valign="top" headers="idm44898780454272">
 									<p>
 										The user’s name (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910978256">
+									</td><td align="left" valign="top" headers="idm44898780453184">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910977168">
+									</td><td align="left" valign="top" headers="idm44898780452096">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215910980432">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898780455360">
 									<p>
 										<code class="literal">STORAGE_PASSWORD</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910979344">
+									</td><td align="left" valign="top" headers="idm44898780454272">
 									<p>
 										The user’s password (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910978256">
+									</td><td align="left" valign="top" headers="idm44898780453184">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910977168">
+									</td><td align="left" valign="top" headers="idm44898780452096">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215910980432">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898780455360">
 									<p>
 										<code class="literal">STORAGE_SKIP_SSL_VERIFICATION</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910979344">
+									</td><td align="left" valign="top" headers="idm44898780454272">
 									<p>
 										If set to <code class="literal">true</code>, SSL verification is not performed (<code class="literal">true</code>, <code class="literal">false</code>).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910978256">
+									</td><td align="left" valign="top" headers="idm44898780453184">
 									<p>
 										No.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910977168">
+									</td><td align="left" valign="top" headers="idm44898780452096">
 									<p>
 										<code class="literal">false</code>
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215910980432">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898780455360">
 									<p>
 										<code class="literal">PURE_CLUSTER_PREFIX</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910979344">
+									</td><td align="left" valign="top" headers="idm44898780454272">
 									<p>
 										The cluster prefix is set in the <code class="literal">StorageCluster</code> resource. Retrieve it by running <code class="literal">printf "px_%.8s" $(oc get storagecluster -A -o=jsonpath='{.items[?(@.spec.cloudStorage.provider=="pure")].status.clusterUid}')</code> in the CLI.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910978256">
+									</td><td align="left" valign="top" headers="idm44898780453184">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910977168">
+									</td><td align="left" valign="top" headers="idm44898780452096">
 									<p>
 										NA.
 									</p>
-									</td></tr></tbody></table></div></div><div class="table" id="idm45215911735312"><p class="title"><strong>Table 2.5. Credentials for a Dell PowerMax storage copy offload Secret</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 22%; " class="col_1"/><col style="width: 48%; " class="col_2"/><col style="width: 15%; " class="col_3"/><col style="width: 15%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm45215913461984" scope="col">Key</th><th align="left" valign="top" id="idm45215913460896" scope="col">Description</th><th align="left" valign="top" id="idm45215913459808" scope="col">Mandatory?</th><th align="left" valign="top" id="idm45215913458720" scope="col">Default</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45215913461984">
+									</td></tr></tbody></table></div></div><div class="table" id="idm44898783358336"><p class="title"><strong>Table 2.5. Credentials for a Dell PowerMax storage copy offload Secret</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 22%; " class="col_1"/><col style="width: 48%; " class="col_2"/><col style="width: 15%; " class="col_3"/><col style="width: 15%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm44898782414592" scope="col">Key</th><th align="left" valign="top" id="idm44898785324176" scope="col">Description</th><th align="left" valign="top" id="idm44898785323200" scope="col">Mandatory?</th><th align="left" valign="top" id="idm44898785322112" scope="col">Default</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm44898782414592">
 									<p>
 										<code class="literal">STORAGE_HOSTNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913460896">
+									</td><td align="left" valign="top" headers="idm44898785324176">
 									<p>
 										IP or URL of the host (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913459808">
+									</td><td align="left" valign="top" headers="idm44898785323200">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913458720">
+									</td><td align="left" valign="top" headers="idm44898785322112">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215913461984">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898782414592">
 									<p>
 										<code class="literal">STORAGE_USERNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913460896">
+									</td><td align="left" valign="top" headers="idm44898785324176">
 									<p>
 										The user’s name (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913459808">
+									</td><td align="left" valign="top" headers="idm44898785323200">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913458720">
+									</td><td align="left" valign="top" headers="idm44898785322112">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215913461984">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898782414592">
 									<p>
 										<code class="literal">STORAGE_PASSWORD</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913460896">
+									</td><td align="left" valign="top" headers="idm44898785324176">
 									<p>
 										The user’s password (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913459808">
+									</td><td align="left" valign="top" headers="idm44898785323200">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913458720">
+									</td><td align="left" valign="top" headers="idm44898785322112">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215913461984">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898782414592">
 									<p>
 										<code class="literal">STORAGE_SKIP_SSL_VERIFICATION</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913460896">
+									</td><td align="left" valign="top" headers="idm44898785324176">
 									<p>
 										If set to <code class="literal">true</code>, SSL verification is not performed (<code class="literal">true</code>, <code class="literal">false</code>).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913459808">
+									</td><td align="left" valign="top" headers="idm44898785323200">
 									<p>
 										No..
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913458720">
+									</td><td align="left" valign="top" headers="idm44898785322112">
 									<p>
 										<code class="literal">false</code>
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215913461984">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898782414592">
 									<p>
 										<code class="literal">POWERMAX_SYMMETRIX_ID</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913460896">
+									</td><td align="left" valign="top" headers="idm44898785324176">
 									<p>
 										The Symmetrix ID of the storage array. Can be taken from the config map under the <span class="emphasis"><em>powermax</em></span> namespace, which the CSI driver uses.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913459808">
+									</td><td align="left" valign="top" headers="idm44898785323200">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913458720">
+									</td><td align="left" valign="top" headers="idm44898785322112">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215913461984">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898782414592">
 									<p>
 										<code class="literal">POWERMAX_PORT_GROUP_NAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913460896">
+									</td><td align="left" valign="top" headers="idm44898785324176">
 									<p>
 										The port group to use for masking view creation.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913459808">
+									</td><td align="left" valign="top" headers="idm44898785323200">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215913458720">
+									</td><td align="left" valign="top" headers="idm44898785322112">
 									<p>
 										NA.
 									</p>
-									</td></tr></tbody></table></div></div><div class="table" id="idm45215915151888"><p class="title"><strong>Table 2.6. Credentials for a Dell PowerFlex storage copy offload Secret</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 22%; " class="col_1"/><col style="width: 48%; " class="col_2"/><col style="width: 15%; " class="col_3"/><col style="width: 15%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm45215912009008" scope="col">Key</th><th align="left" valign="top" id="idm45215912007920" scope="col">Description</th><th align="left" valign="top" id="idm45215912006832" scope="col">Mandatory?</th><th align="left" valign="top" id="idm45215912005744" scope="col">Default</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45215912009008">
+									</td></tr></tbody></table></div></div><div class="table" id="idm44898782175680"><p class="title"><strong>Table 2.6. Credentials for a Dell PowerFlex storage copy offload Secret</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 22%; " class="col_1"/><col style="width: 48%; " class="col_2"/><col style="width: 15%; " class="col_3"/><col style="width: 15%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm44898783831104" scope="col">Key</th><th align="left" valign="top" id="idm44898783830016" scope="col">Description</th><th align="left" valign="top" id="idm44898783828928" scope="col">Mandatory?</th><th align="left" valign="top" id="idm44898783827840" scope="col">Default</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm44898783831104">
 									<p>
 										<code class="literal">STORAGE_HOSTNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215912007920">
+									</td><td align="left" valign="top" headers="idm44898783830016">
 									<p>
 										IP or URL of the host (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215912006832">
+									</td><td align="left" valign="top" headers="idm44898783828928">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215912005744">
+									</td><td align="left" valign="top" headers="idm44898783827840">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215912009008">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898783831104">
 									<p>
 										<code class="literal">STORAGE_USERNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215912007920">
+									</td><td align="left" valign="top" headers="idm44898783830016">
 									<p>
 										The user’s name (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215912006832">
+									</td><td align="left" valign="top" headers="idm44898783828928">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215912005744">
+									</td><td align="left" valign="top" headers="idm44898783827840">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215912009008">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898783831104">
 									<p>
 										<code class="literal">STORAGE_PASSWORD</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215912007920">
+									</td><td align="left" valign="top" headers="idm44898783830016">
 									<p>
 										The user’s password (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215912006832">
+									</td><td align="left" valign="top" headers="idm44898783828928">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215912005744">
+									</td><td align="left" valign="top" headers="idm44898783827840">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215912009008">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898783831104">
 									<p>
 										<code class="literal">STORAGE_SKIP_SSL_VERIFICATION</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215912007920">
+									</td><td align="left" valign="top" headers="idm44898783830016">
 									<p>
 										If set to <code class="literal">true</code>, SSL verification is not performed (<code class="literal">true</code>, <code class="literal">false</code>).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215912006832">
+									</td><td align="left" valign="top" headers="idm44898783828928">
 									<p>
 										No.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215912005744">
+									</td><td align="left" valign="top" headers="idm44898783827840">
 									<p>
 										<code class="literal">false</code>.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215912009008">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898783831104">
 									<p>
 										<code class="literal">POWERFLEX_SYSTEM_ID</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215912007920">
+									</td><td align="left" valign="top" headers="idm44898783830016">
 									<p>
 										The system ID of the storage array. Can be taken from <code class="literal">vxflexos-config`</code> from the <code class="literal">vxflexos`</code> namespace or from the <code class="literal">openshift-operators</code> namespace.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215912006832">
+									</td><td align="left" valign="top" headers="idm44898783828928">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215912005744">
+									</td><td align="left" valign="top" headers="idm44898783827840">
 									<p>
 										NA.
 									</p>
-									</td></tr></tbody></table></div></div><div class="table" id="idm45215902256144"><p class="title"><strong>Table 2.7. Credentials for a Dell PowerStore storage copy offload Secret</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 22%; " class="col_1"/><col style="width: 48%; " class="col_2"/><col style="width: 15%; " class="col_3"/><col style="width: 15%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm45215911664032" scope="col">Key</th><th align="left" valign="top" id="idm45215911662944" scope="col">Description</th><th align="left" valign="top" id="idm45215914867696" scope="col">Mandatory?</th><th align="left" valign="top" id="idm45215914866608" scope="col">Default</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45215911664032">
+									</td></tr></tbody></table></div></div><div class="table" id="idm44898780813824"><p class="title"><strong>Table 2.7. Credentials for a Dell PowerStore storage copy offload Secret</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 22%; " class="col_1"/><col style="width: 48%; " class="col_2"/><col style="width: 15%; " class="col_3"/><col style="width: 15%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm44898781361360" scope="col">Key</th><th align="left" valign="top" id="idm44898781360272" scope="col">Description</th><th align="left" valign="top" id="idm44898781359184" scope="col">Mandatory?</th><th align="left" valign="top" id="idm44898779864816" scope="col">Default</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm44898781361360">
 									<p>
 										<code class="literal">STORAGE_HOSTNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215911662944">
+									</td><td align="left" valign="top" headers="idm44898781360272">
 									<p>
 										IP or URL of the host (string)
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914867696">
+									</td><td align="left" valign="top" headers="idm44898781359184">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914866608">
+									</td><td align="left" valign="top" headers="idm44898779864816">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215911664032">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898781361360">
 									<p>
 										<code class="literal">STORAGE_USERNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215911662944">
+									</td><td align="left" valign="top" headers="idm44898781360272">
 									<p>
 										The user’s name (string).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914867696">
+									</td><td align="left" valign="top" headers="idm44898781359184">
 									<p>
 										Yes.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914866608">
+									</td><td align="left" valign="top" headers="idm44898779864816">
 									<p>
 										NA.
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215911664032">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898781361360">
 									<p>
 										<code class="literal">STORAGE_PASSWORD</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215911662944">
+									</td><td align="left" valign="top" headers="idm44898781360272">
 									<p>
 										The user’s password (string)
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914867696">
+									</td><td align="left" valign="top" headers="idm44898781359184">
 									<p>
 										Yes
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914866608">
+									</td><td align="left" valign="top" headers="idm44898779864816">
 									<p>
 										NA
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215911664032">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898781361360">
 									<p>
 										<code class="literal">STORAGE_SKIP_SSL_VERIFICATION</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215911662944">
+									</td><td align="left" valign="top" headers="idm44898781360272">
 									<p>
 										If set to <code class="literal">true</code>, SSL verification is not performed (<code class="literal">true</code>, <code class="literal">false</code>).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914867696">
+									</td><td align="left" valign="top" headers="idm44898781359184">
 									<p>
 										No
 									</p>
-									</td><td align="left" valign="top" headers="idm45215914866608">
+									</td><td align="left" valign="top" headers="idm44898779864816">
 									<p>
 										<code class="literal">false</code>
 									</p>
-									</td></tr></tbody></table></div></div><div class="table" id="idm45215910464096"><p class="title"><strong>Table 2.8. Credentials for an HPE 3PAR or HPE Primera storage copy offload Secret storage copy offload Secret</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 22%; " class="col_1"/><col style="width: 48%; " class="col_2"/><col style="width: 15%; " class="col_3"/><col style="width: 15%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm45215903883296" scope="col">Key</th><th align="left" valign="top" id="idm45215916274224" scope="col">Description</th><th align="left" valign="top" id="idm45215916273136" scope="col">Mandatory?</th><th align="left" valign="top" id="idm45215916272048" scope="col">Default</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45215903883296">
+									</td></tr></tbody></table></div></div><div class="table" id="idm44898782161472"><p class="title"><strong>Table 2.8. Credentials for an HPE 3PAR or HPE Primera storage copy offload Secret storage copy offload Secret</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 22%; " class="col_1"/><col style="width: 48%; " class="col_2"/><col style="width: 15%; " class="col_3"/><col style="width: 15%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm44898780743328" scope="col">Key</th><th align="left" valign="top" id="idm44898780742240" scope="col">Description</th><th align="left" valign="top" id="idm44898780741152" scope="col">Mandatory?</th><th align="left" valign="top" id="idm44898785120448" scope="col">Default</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm44898780743328">
 									<p>
 										<code class="literal">STORAGE_HOSTNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215916274224">
+									</td><td align="left" valign="top" headers="idm44898780742240">
 									<p>
 										Must include the full URL with protocol. For HPE 3PAR, must also include Web Services API (WSAPI) port. Use the HPE 3PAR command <code class="literal">cli% showwsapi</code> to determine the correct WSAPI port. HPE 3PAR systems default to port 8080 for both HTTP and HTTPS connections, HPE Primera defaults to port 443 (SSL/HTTPS). Depending on configured certificates, you might need to skip SSL verification. Example: <code class="literal">https://192.168.1.1:8080</code>.
 									</p>
-									</td><td align="left" valign="top" headers="idm45215916273136">
+									</td><td align="left" valign="top" headers="idm44898780741152">
 									<p>
 										Yes
 									</p>
-									</td><td align="left" valign="top" headers="idm45215916272048">
+									</td><td align="left" valign="top" headers="idm44898785120448">
 									<p>
 										NA
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215903883296">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898780743328">
 									<p>
 										<code class="literal">STORAGE_USERNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215916274224">
+									</td><td align="left" valign="top" headers="idm44898780742240">
 									<p>
 										The user’s name (string)
 									</p>
-									</td><td align="left" valign="top" headers="idm45215916273136">
+									</td><td align="left" valign="top" headers="idm44898780741152">
 									<p>
 										Yes
 									</p>
-									</td><td align="left" valign="top" headers="idm45215916272048">
+									</td><td align="left" valign="top" headers="idm44898785120448">
 									<p>
 										NA
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215903883296">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898780743328">
 									<p>
 										<code class="literal">STORAGE_PASSWORD</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215916274224">
+									</td><td align="left" valign="top" headers="idm44898780742240">
 									<p>
 										The user’s password (string)
 									</p>
-									</td><td align="left" valign="top" headers="idm45215916273136">
+									</td><td align="left" valign="top" headers="idm44898780741152">
 									<p>
 										Yes
 									</p>
-									</td><td align="left" valign="top" headers="idm45215916272048">
+									</td><td align="left" valign="top" headers="idm44898785120448">
 									<p>
 										NA
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215903883296">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898780743328">
 									<p>
 										<code class="literal">STORAGE_SKIP_SSL_VERIFICATION</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215916274224">
+									</td><td align="left" valign="top" headers="idm44898780742240">
 									<p>
 										If set to <code class="literal">true</code>, SSL verification is not performed (<code class="literal">true</code>, <code class="literal">false</code>).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215916273136">
+									</td><td align="left" valign="top" headers="idm44898780741152">
 									<p>
 										No
 									</p>
-									</td><td align="left" valign="top" headers="idm45215916272048">
+									</td><td align="left" valign="top" headers="idm44898785120448">
 									<p>
 										<code class="literal">false</code>
 									</p>
-									</td></tr></tbody></table></div></div><div class="table" id="idm45215911633408"><p class="title"><strong>Table 2.9. Credentials for an Infinidat InfiBox storage copy offload Secret</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 22%; " class="col_1"/><col style="width: 48%; " class="col_2"/><col style="width: 15%; " class="col_3"/><col style="width: 15%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm45215905257792" scope="col">Key</th><th align="left" valign="top" id="idm45215905256704" scope="col">Description</th><th align="left" valign="top" id="idm45215905255616" scope="col">Mandatory?</th><th align="left" valign="top" id="idm45215905254528" scope="col">Default</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45215905257792">
+									</td></tr></tbody></table></div></div><div class="table" id="idm44898781807648"><p class="title"><strong>Table 2.9. Credentials for an Infinidat InfiBox storage copy offload Secret</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 22%; " class="col_1"/><col style="width: 48%; " class="col_2"/><col style="width: 15%; " class="col_3"/><col style="width: 15%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm44898781916912" scope="col">Key</th><th align="left" valign="top" id="idm44898781915824" scope="col">Description</th><th align="left" valign="top" id="idm44898781956800" scope="col">Mandatory?</th><th align="left" valign="top" id="idm44898781955712" scope="col">Default</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm44898781916912">
 									<p>
 										<code class="literal">STORAGE_HOSTNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215905256704">
+									</td><td align="left" valign="top" headers="idm44898781915824">
 									<p>
 										IP or URL of the host (string)
 									</p>
-									</td><td align="left" valign="top" headers="idm45215905255616">
+									</td><td align="left" valign="top" headers="idm44898781956800">
 									<p>
 										Yes
 									</p>
-									</td><td align="left" valign="top" headers="idm45215905254528">
+									</td><td align="left" valign="top" headers="idm44898781955712">
 									<p>
 										NA
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215905257792">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898781916912">
 									<p>
 										<code class="literal">STORAGE_USERNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215905256704">
+									</td><td align="left" valign="top" headers="idm44898781915824">
 									<p>
 										The user’s name (string)
 									</p>
-									</td><td align="left" valign="top" headers="idm45215905255616">
+									</td><td align="left" valign="top" headers="idm44898781956800">
 									<p>
 										Yes
 									</p>
-									</td><td align="left" valign="top" headers="idm45215905254528">
+									</td><td align="left" valign="top" headers="idm44898781955712">
 									<p>
 										NA
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215905257792">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898781916912">
 									<p>
 										<code class="literal">STORAGE_PASSWORD</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215905256704">
+									</td><td align="left" valign="top" headers="idm44898781915824">
 									<p>
 										The user’s password (string)
 									</p>
-									</td><td align="left" valign="top" headers="idm45215905255616">
+									</td><td align="left" valign="top" headers="idm44898781956800">
 									<p>
 										Yes
 									</p>
-									</td><td align="left" valign="top" headers="idm45215905254528">
+									</td><td align="left" valign="top" headers="idm44898781955712">
 									<p>
 										NA
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215905257792">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898781916912">
 									<p>
 										<code class="literal">STORAGE_SKIP_SSL_VERIFICATION</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215905256704">
+									</td><td align="left" valign="top" headers="idm44898781915824">
 									<p>
 										If set to <code class="literal">true</code>, SSL verification is not performed (<code class="literal">true</code>, <code class="literal">false</code>).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215905255616">
+									</td><td align="left" valign="top" headers="idm44898781956800">
 									<p>
 										No
 									</p>
-									</td><td align="left" valign="top" headers="idm45215905254528">
+									</td><td align="left" valign="top" headers="idm44898781955712">
 									<p>
 										<code class="literal">false</code>
 									</p>
-									</td></tr></tbody></table></div></div><div class="table" id="idm45215907197312"><p class="title"><strong>Table 2.10. Credentials for an IBM FlashSystem storage copy offload Secret</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 22%; " class="col_1"/><col style="width: 48%; " class="col_2"/><col style="width: 15%; " class="col_3"/><col style="width: 15%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm45215917653216" scope="col">Key</th><th align="left" valign="top" id="idm45215910650592" scope="col">Description</th><th align="left" valign="top" id="idm45215910649504" scope="col">Mandatory?</th><th align="left" valign="top" id="idm45215910648416" scope="col">Default</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45215917653216">
+									</td></tr></tbody></table></div></div><div class="table" id="idm44898771402400"><p class="title"><strong>Table 2.10. Credentials for an IBM FlashSystem storage copy offload Secret</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 22%; " class="col_1"/><col style="width: 48%; " class="col_2"/><col style="width: 15%; " class="col_3"/><col style="width: 15%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm44898781890768" scope="col">Key</th><th align="left" valign="top" id="idm44898781889680" scope="col">Description</th><th align="left" valign="top" id="idm44898782668240" scope="col">Mandatory?</th><th align="left" valign="top" id="idm44898782667152" scope="col">Default</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm44898781890768">
 									<p>
 										<code class="literal">STORAGE_HOSTNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910650592">
+									</td><td align="left" valign="top" headers="idm44898781889680">
 									<p>
 										IP or URL of the host (string)
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910649504">
+									</td><td align="left" valign="top" headers="idm44898782668240">
 									<p>
 										Yes
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910648416">
+									</td><td align="left" valign="top" headers="idm44898782667152">
 									<p>
 										NA
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215917653216">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898781890768">
 									<p>
 										<code class="literal">STORAGE_USERNAME</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910650592">
+									</td><td align="left" valign="top" headers="idm44898781889680">
 									<p>
 										The user’s name (string)
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910649504">
+									</td><td align="left" valign="top" headers="idm44898782668240">
 									<p>
 										Yes
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910648416">
+									</td><td align="left" valign="top" headers="idm44898782667152">
 									<p>
 										NA
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215917653216">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898781890768">
 									<p>
 										<code class="literal">STORAGE_PASSWORD</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910650592">
+									</td><td align="left" valign="top" headers="idm44898781889680">
 									<p>
 										The user’s password (string)
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910649504">
+									</td><td align="left" valign="top" headers="idm44898782668240">
 									<p>
 										Yes
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910648416">
+									</td><td align="left" valign="top" headers="idm44898782667152">
 									<p>
 										NA
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm45215917653216">
+									</td></tr><tr><td align="left" valign="top" headers="idm44898781890768">
 									<p>
 										<code class="literal">STORAGE_SKIP_SSL_VERIFICATION</code>
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910650592">
+									</td><td align="left" valign="top" headers="idm44898781889680">
 									<p>
 										If set to <code class="literal">true</code>, SSL verification is not performed (<code class="literal">true</code>, <code class="literal">false</code>).
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910649504">
+									</td><td align="left" valign="top" headers="idm44898782668240">
 									<p>
 										No
 									</p>
-									</td><td align="left" valign="top" headers="idm45215910648416">
+									</td><td align="left" valign="top" headers="idm44898782667152">
 									<p>
 										<code class="literal">false</code>
 									</p>
@@ -1466,75 +1466,75 @@ spec:
 											Specifies the string that identifies the storage product. Valid strings are listed in the table that follows this CR.
 										</dd><dt><span class="term"><code class="literal">&lt;datastore_ID&gt;</code></span></dt><dd><p class="simpara">
 											Specifies the datastore ID as set by VMware vSphere.
-										</p><div class="table" id="idm45215911767552"><p class="title"><strong>Table 2.11. Supported storage vendors and their identifying strings in the CLI</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th style="text-align: left; vertical-align: top; " id="idm45215911762672" scope="col">Vendor</th><th style="text-align: left; vertical-align: top; " id="idm45215911761584" scope="col">Identifying string (Value of <code class="literal">storageVendorProduct</code> label)</th></tr></thead><tbody><tr><td style="text-align: left; vertical-align: top; " headers="idm45215911762672">
+										</p><div class="table" id="idm44898780784928"><p class="title"><strong>Table 2.11. Supported storage vendors and their identifying strings in the CLI</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th style="text-align: left; vertical-align: top; " id="idm44898780310416" scope="col">Vendor</th><th style="text-align: left; vertical-align: top; " id="idm44898780309328" scope="col">Identifying string (Value of <code class="literal">storageVendorProduct</code> label)</th></tr></thead><tbody><tr><td style="text-align: left; vertical-align: top; " headers="idm44898780310416">
 														<p>
 															Hitachi Vantara
 														</p>
-														</td><td style="text-align: left; vertical-align: top; " headers="idm45215911761584">
+														</td><td style="text-align: left; vertical-align: top; " headers="idm44898780309328">
 														<p>
 															<code class="literal">vantara</code>
 														</p>
-														</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm45215911762672">
+														</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm44898780310416">
 														<p>
 															NetApp
 														</p>
-														</td><td style="text-align: left; vertical-align: top; " headers="idm45215911761584">
+														</td><td style="text-align: left; vertical-align: top; " headers="idm44898780309328">
 														<p>
 															<code class="literal">ontap</code>
 														</p>
-														</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm45215911762672">
+														</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm44898780310416">
 														<p>
 															Hewlett Packard Enterprise
 														</p>
-														</td><td style="text-align: left; vertical-align: top; " headers="idm45215911761584">
+														</td><td style="text-align: left; vertical-align: top; " headers="idm44898780309328">
 														<p>
 															<code class="literal">primera3par</code>
 														</p>
-														</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm45215911762672">
+														</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm44898780310416">
 														<p>
 															Pure Storage
 														</p>
-														</td><td style="text-align: left; vertical-align: top; " headers="idm45215911761584">
+														</td><td style="text-align: left; vertical-align: top; " headers="idm44898780309328">
 														<p>
 															<code class="literal">pureFlashArray</code>
 														</p>
-														</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm45215911762672">
+														</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm44898780310416">
 														<p>
 															Dell (PowerFlex)
 														</p>
-														</td><td style="text-align: left; vertical-align: top; " headers="idm45215911761584">
+														</td><td style="text-align: left; vertical-align: top; " headers="idm44898780309328">
 														<p>
 															<code class="literal">powerflex</code>
 														</p>
-														</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm45215911762672">
+														</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm44898780310416">
 														<p>
 															Dell (PowerMax)
 														</p>
-														</td><td style="text-align: left; vertical-align: top; " headers="idm45215911761584">
+														</td><td style="text-align: left; vertical-align: top; " headers="idm44898780309328">
 														<p>
 															<code class="literal">powermax</code>
 														</p>
-														</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm45215911762672">
+														</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm44898780310416">
 														<p>
 															Dell (PowerStore)
 														</p>
-														</td><td style="text-align: left; vertical-align: top; " headers="idm45215911761584">
+														</td><td style="text-align: left; vertical-align: top; " headers="idm44898780309328">
 														<p>
 															<code class="literal">powerstore</code>
 														</p>
-														</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm45215911762672">
+														</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm44898780310416">
 														<p>
 															Infinidat
 														</p>
-														</td><td style="text-align: left; vertical-align: top; " headers="idm45215911761584">
+														</td><td style="text-align: left; vertical-align: top; " headers="idm44898780309328">
 														<p>
 															<code class="literal">infinibox</code>
 														</p>
-														</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm45215911762672">
+														</td></tr><tr><td style="text-align: left; vertical-align: top; " headers="idm44898780310416">
 														<p>
 															IBM
 														</p>
-														</td><td style="text-align: left; vertical-align: top; " headers="idm45215911761584">
+														</td><td style="text-align: left; vertical-align: top; " headers="idm44898780309328">
 														<p>
 															<code class="literal">flashsystem</code>
 														</p>
@@ -1629,7 +1629,7 @@ spec:
 					To understand how to assign VMs and shared disks to each of the <code class="literal">Plan</code> CRs, consider the two figures that follow. In both, <code class="literal">migrateSharedDisks</code> is set to <code class="literal">true</code> for <code class="literal">plan1</code> and set to <code class="literal">false</code> for <code class="literal">plan2</code>.
 				</p><p>
 					In the first figure, the VMs and shared disks are assigned correctly:
-				</p><div class="figure" id="idm45215911024208"><p class="title"><strong>Figure 2.1. Example of correctly assigned VMs and shared disks</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/modules/images/OK_shared_disks.png" alt="Example successful migration"/></div></div></div><p>
+				</p><div class="figure" id="idm44898784462512"><p class="title"><strong>Figure 2.1. Example of correctly assigned VMs and shared disks</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/modules/images/OK_shared_disks.png" alt="Example successful migration"/></div></div></div><p>
 					<code class="literal">plan1</code> migrates VMs 2 and 4, shared disks 1, 2, and 3, and the non-shared disks of VMs 2 and 4. VMs 2 and 4 are included in this plan, because they connect to all the shared disks once each.
 				</p><p>
 					<code class="literal">plan2</code> migrates VMs 1 and 3 and their non-shared disks. <code class="literal">plan2</code> does not migrate the shared disks connected to VMs 1 and 3 because <code class="literal">migrateSharedDisks</code> is set to <code class="literal">false</code>.
@@ -1651,7 +1651,7 @@ spec:
 					The result is that VMs 2 and 4, all the shared disks, and all the non-shared disks are migrated, but only once. MTV is able to reattach all VMs to their disks, including the shared disks.
 				</p><p>
 					In the second figure, the VMs and shared disks are not assigned correctly:
-				</p><div class="figure" id="idm45215911880432"><p class="title"><strong>Figure 2.2. Example of incorrectly assigned VMs and shared disks</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/modules/images/not_OK_shared_disks.png" alt="Complex cyclic shared disk dependencies"/></div></div></div><p>
+				</p><div class="figure" id="idm44898781078416"><p class="title"><strong>Figure 2.2. Example of incorrectly assigned VMs and shared disks</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/modules/images/not_OK_shared_disks.png" alt="Complex cyclic shared disk dependencies"/></div></div></div><p>
 					In this case, MTV migrates each VMs and its disks as follows:
 				</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
 							From <code class="literal">plan1</code>:
@@ -1771,7 +1771,7 @@ spec:
 						In the case of 2 VMs sharing one disk, there is no problem. MTV transfers the shared disk and attaches the 2 VMs to the shared disk after the migration.
 					</p><p>
 						However, if there is a cyclic dependency of shared disks between 3 or more VMs, MTV either duplicates or omits one of the shared disks. The figure that follows illustrates the simplest version of this problem.
-					</p><div class="figure" id="idm45215913304864"><p class="title"><strong>Figure 2.3. Simple example of cyclic shared disks</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/modules/images/simple-cyclic-shared-disks.png" alt="Simple cyclic shared disk dependencies"/></div></div></div><p>
+					</p><div class="figure" id="idm44898787727328"><p class="title"><strong>Figure 2.3. Simple example of cyclic shared disks</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/modules/images/simple-cyclic-shared-disks.png" alt="Simple cyclic shared disk dependencies"/></div></div></div><p>
 						In this case, the VMs and shared disks cannot be migrated in the same <code class="literal">Plan</code> CR. Although this problem could be solved using <code class="literal">migrateSharedDisks</code> and 2 <code class="literal">Plan</code> CRs, it illustrates the basic issue that must be avoided in migrating VMs with shared disks.
 					</p></section><section class="section" id="cyclic-shared-disk-workarounds_vmware"><div class="titlepage"><div><div><h4 class="title">2.4.2.2. Workarounds for VMs with shared disk dependencies</h4></div></div></div><p class="_abstract _abstract">
 						As discussed previously, it is important to try to create 2 <code class="literal">Plan</code> CRs in which each shared disk is migrated once. However, if your migration does result in a shared disk either being duplicated or not being transferred, you can use one of the following workarounds:
@@ -1781,13 +1781,13 @@ spec:
 								"Remove" one of the shared disks
 							</li></ul></div><section class="section" id="duplicate-shared-disk_vmware"><div class="titlepage"><div><div><h5 class="title">2.4.2.2.1. Duplicate a shared disk</h5></div></div></div><p>
 							In the figure that follows, VMs 2 and 3 are migrated with the shared disks in the first plan, and VM 1 is migrated in the second plan. This eliminates the cyclic dependencies, but there is a disadvantage to this workaround: it duplicates shared disk 3. The solution is to remove the duplicated PV and migrate VM 1 again.
-						</p><div class="figure" id="idm45215905036240"><p class="title"><strong>Figure 2.4. Duplicated shared disk</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/modules/images/cyclic_workaround1.png" alt="Duplicate a shared disk"/></div></div></div><p>
+						</p><div class="figure" id="idm44898782588448"><p class="title"><strong>Figure 2.4. Duplicated shared disk</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/modules/images/cyclic_workaround1.png" alt="Duplicate a shared disk"/></div></div></div><p>
 							Advantage: The source VMs are not affected.
 						</p><p>
 							Disadvantage: One shared disk gets transferred twice, so you need to manually delete the duplicate disk and reconnect VM 3 to shared disk 3 in Red Hat OpenShift after the migration.
 						</p></section><section class="section" id="remove-shared-link_vmware"><div class="titlepage"><div><div><h5 class="title">2.4.2.2.2. "Remove" a shared disk</h5></div></div></div><p>
 							The figure that follows shows an alternative solution: Remove the link to one of the shared disks from one source VM. Doing this breaks the cyclic dependencies. Note that in the current VMware UI, removing the link is referred to as "removing" the disk.
-						</p><div class="figure" id="idm45215911907392"><p class="title"><strong>Figure 2.5. "Removed" shared disk</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/modules/images/draft_workaround2.png" alt="Remove a shared disk"/></div></div></div><p>
+						</p><div class="figure" id="idm44898776337360"><p class="title"><strong>Figure 2.5. "Removed" shared disk</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/modules/images/draft_workaround2.png" alt="Remove a shared disk"/></div></div></div><p>
 							In this case, VM 2 and 3 are migrated with the shared disks in the first plan, but the link between VM 3 and shared disk 3 is removed. As before, VM 1 is migrated in the second plan.
 						</p><p>
 							Doing this breaks the cyclic dependencies, but this workaround has a drawback: VM 3 is disconnected from shared disk 3 and remains disconnected after the migration. The solution is to manually reattach shared disk 3 to VM 3 after the migration finishes.
@@ -1799,351 +1799,351 @@ spec:
 					You can use the template utility of Migration Toolkit for Virtualization (MTV) to generate names for your virtual machines (VMs). Using names generated by these methods reduces the possibilities of problems with your VMs after their migration to OpenShift Virtualization.
 				</p><p>
 					The tables that follow describe string and mathematical functions that you can use in templates that rename VMs for use with MTV.
-				</p><div class="table" id="idm45215910177632"><p class="title"><strong>Table 2.12. String functions</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 33%; " class="col_1"/><col style="width: 33%; " class="col_2"/><col style="width: 33%; " class="col_3"/></colgroup><thead><tr><th align="left" valign="top" id="idm45215910171872" scope="col">Function</th><th align="left" valign="top" id="idm45215911355824" scope="col">Description</th><th align="left" valign="top" id="idm45215911354736" scope="col">Example</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45215910171872">
+				</p><div class="table" id="idm44898781130416"><p class="title"><strong>Table 2.12. String functions</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 33%; " class="col_1"/><col style="width: 33%; " class="col_2"/><col style="width: 33%; " class="col_3"/></colgroup><thead><tr><th align="left" valign="top" id="idm44898774867808" scope="col">Function</th><th align="left" valign="top" id="idm44898774866720" scope="col">Description</th><th align="left" valign="top" id="idm44898774865632" scope="col">Example</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm44898774867808">
 								<p>
 									<code class="literal">lower</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911355824">
+								</td><td align="left" valign="top" headers="idm44898774866720">
 								<p>
 									Converts a string to lowercase.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911354736">
+								</td><td align="left" valign="top" headers="idm44898774865632">
 								<p>
 									<code class="literal">{{ lower "TEXT" }}</code> → <code class="literal">text</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215910171872">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898774867808">
 								<p>
 									<code class="literal">upper</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911355824">
+								</td><td align="left" valign="top" headers="idm44898774866720">
 								<p>
 									Converts a string to uppercase.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911354736">
+								</td><td align="left" valign="top" headers="idm44898774865632">
 								<p>
 									<code class="literal">{{ upper "text" }}</code> → <code class="literal">TEXT</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215910171872">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898774867808">
 								<p>
 									<code class="literal">contains</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911355824">
+								</td><td align="left" valign="top" headers="idm44898774866720">
 								<p>
 									Checks if a string contains a specific substring.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911354736">
+								</td><td align="left" valign="top" headers="idm44898774865632">
 								<p>
 									<code class="literal">{{ contains "hello" "lo" }}</code> → <code class="literal">true</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215910171872">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898774867808">
 								<p>
 									<code class="literal">replace</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911355824">
+								</td><td align="left" valign="top" headers="idm44898774866720">
 								<p>
 									Replaces occurrences in a string.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911354736">
+								</td><td align="left" valign="top" headers="idm44898774865632">
 								<p>
 									<code class="literal">{{"I Am Henry VIII" | replace "{nbsp}" "-"}}</code>→ <code class="literal">I-Am-Henry-VIII</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215910171872">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898774867808">
 								<p>
 									<code class="literal">trim</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911355824">
+								</td><td align="left" valign="top" headers="idm44898774866720">
 								<p>
 									Removes whitespace from both ends of a string.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911354736">
+								</td><td align="left" valign="top" headers="idm44898774865632">
 								<p>
 									<code class="literal">{{ trim " text " }}</code> → <code class="literal">text</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215910171872">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898774867808">
 								<p>
 									<code class="literal">trimAll</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911355824">
+								</td><td align="left" valign="top" headers="idm44898774866720">
 								<p>
 									Removes specified characters from both ends of a string.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911354736">
+								</td><td align="left" valign="top" headers="idm44898774865632">
 								<p>
 									<code class="literal">{{ trimAll "$" "$5.00$" }}</code> → <code class="literal">5.00</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215910171872">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898774867808">
 								<p>
 									<code class="literal">trimSuffix</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911355824">
+								</td><td align="left" valign="top" headers="idm44898774866720">
 								<p>
 									Removes the specified suffix from a string, if it is present.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911354736">
+								</td><td align="left" valign="top" headers="idm44898774865632">
 								<p>
 									<code class="literal">{{ trimSuffix ".go" "file.go" }}</code> → <code class="literal">file</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215910171872">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898774867808">
 								<p>
 									<code class="literal">trimPrefix</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911355824">
+								</td><td align="left" valign="top" headers="idm44898774866720">
 								<p>
 									Removes the specified prefix from a string, if it is present.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911354736">
+								</td><td align="left" valign="top" headers="idm44898774865632">
 								<p>
 									<code class="literal">{{ trimPrefix "go." "go.file" }}</code> → <code class="literal">file</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215910171872">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898774867808">
 								<p>
 									<code class="literal">title</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911355824">
+								</td><td align="left" valign="top" headers="idm44898774866720">
 								<p>
 									Converts a string to title case.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911354736">
+								</td><td align="left" valign="top" headers="idm44898774865632">
 								<p>
 									<code class="literal">{{ title "hello world" }}</code> → <code class="literal">Hello World</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215910171872">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898774867808">
 								<p>
 									<code class="literal">untitle</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911355824">
+								</td><td align="left" valign="top" headers="idm44898774866720">
 								<p>
 									Converts a string in title case to lowercase.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911354736">
+								</td><td align="left" valign="top" headers="idm44898774865632">
 								<p>
 									<code class="literal">{{ untitle "Hello World" }}</code>→ <code class="literal">hello world</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215910171872">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898774867808">
 								<p>
 									<code class="literal">repeat</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911355824">
+								</td><td align="left" valign="top" headers="idm44898774866720">
 								<p>
 									Repeats a string <span class="emphasis"><em>n</em></span> times.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911354736">
+								</td><td align="left" valign="top" headers="idm44898774865632">
 								<p>
 									<code class="literal">{{ repeat 3 "abc" }}</code> → <code class="literal">abcabcabc</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215910171872">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898774867808">
 								<p>
 									<code class="literal">substr</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911355824">
+								</td><td align="left" valign="top" headers="idm44898774866720">
 								<p>
 									Extracts substring from <span class="emphasis"><em>index&gt;=a</em></span> to <span class="emphasis"><em>b&lt;index</em></span>.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911354736">
+								</td><td align="left" valign="top" headers="idm44898774865632">
 								<p>
 									<code class="literal">{{ substr 1 4 "abcdef" }}</code> → <code class="literal">bcd</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215910171872">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898774867808">
 								<p>
 									<code class="literal">nospace</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911355824">
+								</td><td align="left" valign="top" headers="idm44898774866720">
 								<p>
 									Removes all whitespace from a string.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911354736">
+								</td><td align="left" valign="top" headers="idm44898774865632">
 								<p>
 									<code class="literal">{{ nospace "a b c" }}</code> → <code class="literal">abc</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215910171872">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898774867808">
 								<p>
 									<code class="literal">trunc</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911355824">
+								</td><td align="left" valign="top" headers="idm44898774866720">
 								<p>
 									Truncates a string to specified length.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911354736">
+								</td><td align="left" valign="top" headers="idm44898774865632">
 								<p>
 									<code class="literal">{{ trunc 3 "abcdef" }}</code> → <code class="literal">abc</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215910171872">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898774867808">
 								<p>
 									<code class="literal">initials</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911355824">
+								</td><td align="left" valign="top" headers="idm44898774866720">
 								<p>
 									Extracts the first letter of each word in a string.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911354736">
+								</td><td align="left" valign="top" headers="idm44898774865632">
 								<p>
 									<code class="literal">{{ initials "John Doe" }} → `JD</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215910171872">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898774867808">
 								<p>
 									<code class="literal">hasPrefix</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911355824">
+								</td><td align="left" valign="top" headers="idm44898774866720">
 								<p>
 									Checks if a string starts with the specified prefix.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911354736">
+								</td><td align="left" valign="top" headers="idm44898774865632">
 								<p>
 									<code class="literal">{{ hasPrefix "go" "golang" }}</code> → <code class="literal">true</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215910171872">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898774867808">
 								<p>
 									<code class="literal">hasSuffix</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911355824">
+								</td><td align="left" valign="top" headers="idm44898774866720">
 								<p>
 									Checks if a string ends with the specified suffix.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911354736">
+								</td><td align="left" valign="top" headers="idm44898774865632">
 								<p>
 									<code class="literal">{{ hasSuffix "ing" "coding" }}</code> → <code class="literal">true</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215910171872">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898774867808">
 								<p>
 									<code class="literal">mustRegexReplaceAll</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911355824">
+								</td><td align="left" valign="top" headers="idm44898774866720">
 								<p>
 									Replaces matches using regular expressions with submatch expansion.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911354736">
+								</td><td align="left" valign="top" headers="idm44898774865632">
 								<p>
 									<code class="literal">{{ mustRegexReplaceAll "a(x*)b" "-ab-axxb-" "${1}W" }}</code> → <code class="literal">-W-xxW-</code>
 								</p>
-								</td></tr></tbody></table></div></div><div class="table" id="idm45215911234736"><p class="title"><strong>Table 2.13. Mathematical functions</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 33%; " class="col_1"/><col style="width: 33%; " class="col_2"/><col style="width: 33%; " class="col_3"/></colgroup><thead><tr><th align="left" valign="top" id="idm45215911228976" scope="col">Function</th><th align="left" valign="top" id="idm45215911227888" scope="col">Description</th><th align="left" valign="top" id="idm45215903004976" scope="col">Example</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45215911228976">
+								</td></tr></tbody></table></div></div><div class="table" id="idm44898782089584"><p class="title"><strong>Table 2.13. Mathematical functions</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 33%; " class="col_1"/><col style="width: 33%; " class="col_2"/><col style="width: 33%; " class="col_3"/></colgroup><thead><tr><th align="left" valign="top" id="idm44898782332800" scope="col">Function</th><th align="left" valign="top" id="idm44898782331712" scope="col">Description</th><th align="left" valign="top" id="idm44898782330624" scope="col">Example</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm44898782332800">
 								<p>
 									<code class="literal">add</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911227888">
+								</td><td align="left" valign="top" headers="idm44898782331712">
 								<p>
 									Sum of the numbers that follow.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903004976">
+								</td><td align="left" valign="top" headers="idm44898782330624">
 								<p>
 									<code class="literal">{{ add 1 2 3 }}</code> → <code class="literal">6</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215911228976">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898782332800">
 								<p>
 									<code class="literal">add1</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911227888">
+								</td><td align="left" valign="top" headers="idm44898782331712">
 								<p>
 									Increment by 1.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903004976">
+								</td><td align="left" valign="top" headers="idm44898782330624">
 								<p>
 									<code class="literal">{{ add1 5 }}</code> → <code class="literal">6</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215911228976">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898782332800">
 								<p>
 									<code class="literal">sub</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911227888">
+								</td><td align="left" valign="top" headers="idm44898782331712">
 								<p>
 									Subtract the second number from the first.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903004976">
+								</td><td align="left" valign="top" headers="idm44898782330624">
 								<p>
 									<code class="literal">{{ sub 5 3 }}</code> → <code class="literal">2</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215911228976">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898782332800">
 								<p>
 									<code class="literal">div</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911227888">
+								</td><td align="left" valign="top" headers="idm44898782331712">
 								<p>
 									Integer division (remainder discarded).
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903004976">
+								</td><td align="left" valign="top" headers="idm44898782330624">
 								<p>
 									<code class="literal">{{ div 10 3 }}</code>→<code class="literal">3</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215911228976">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898782332800">
 								<p>
 									<code class="literal">mod</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911227888">
+								</td><td align="left" valign="top" headers="idm44898782331712">
 								<p>
 									Modulo operation.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903004976">
+								</td><td align="left" valign="top" headers="idm44898782330624">
 								<p>
 									<code class="literal">{{ mod 10 3 }}</code> → <code class="literal">1</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215911228976">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898782332800">
 								<p>
 									<code class="literal">multiply</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911227888">
+								</td><td align="left" valign="top" headers="idm44898782331712">
 								<p>
 									Multiply the numbers that follow.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903004976">
+								</td><td align="left" valign="top" headers="idm44898782330624">
 								<p>
 									<code class="literal">{{ mul 2 3 4 }}</code> → <code class="literal">24</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215911228976">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898782332800">
 								<p>
 									<code class="literal">max</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911227888">
+								</td><td align="left" valign="top" headers="idm44898782331712">
 								<p>
 									Return the largest of the following integers.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903004976">
+								</td><td align="left" valign="top" headers="idm44898782330624">
 								<p>
 									<code class="literal">{{ max 1 5 3 }}</code> → <code class="literal">5</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215911228976">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898782332800">
 								<p>
 									<code class="literal">min</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911227888">
+								</td><td align="left" valign="top" headers="idm44898782331712">
 								<p>
 									Return the smallest of the following integers.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903004976">
+								</td><td align="left" valign="top" headers="idm44898782330624">
 								<p>
 									<code class="literal">{{ min 1 5 3 }}</code> → <code class="literal">1</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215911228976">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898782332800">
 								<p>
 									<code class="literal">floor</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911227888">
+								</td><td align="left" valign="top" headers="idm44898782331712">
 								<p>
 									Round the following number down to the nearest integer.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903004976">
+								</td><td align="left" valign="top" headers="idm44898782330624">
 								<p>
 									<code class="literal">{{ floor 3.75 }}</code> → <code class="literal">3.0</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215911228976">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898782332800">
 								<p>
 									<code class="literal">ceil</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911227888">
+								</td><td align="left" valign="top" headers="idm44898782331712">
 								<p>
 									Round the following number up to the nearest integer.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903004976">
+								</td><td align="left" valign="top" headers="idm44898782330624">
 								<p>
 									<code class="literal">{{ ceil 3.25 }}</code> → <code class="literal">4.0</code>
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215911228976">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898782332800">
 								<p>
 									<code class="literal">round</code>
 								</p>
-								</td><td align="left" valign="top" headers="idm45215911227888">
+								</td><td align="left" valign="top" headers="idm44898782331712">
 								<p>
 									Round the following number to the specified number of decimal places.
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903004976">
+								</td><td align="left" valign="top" headers="idm44898782330624">
 								<p>
 									<code class="literal">{{ round 3.75159 2 }}</code> → <code class="literal">3.75</code>
 								</p>
@@ -4044,11 +4044,11 @@ concerns[flag] {
 							VMware API path: <code class="literal">MOR:VirtualMachine.config.extraConfig["numa.nodeAffinity"]</code>.
 						</li><li class="listitem"><p class="simpara">
 							<code class="literal">Provider Inventory</code> service attribute with a list value:
-						</p><div class="informaltable"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th align="left" valign="top" id="idm45215907137040" scope="col">Inventory Attribute</th><th align="left" valign="top" id="idm45215907135952" scope="col">Example Value</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45215907137040">
+						</p><div class="informaltable"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th align="left" valign="top" id="idm44898772156784" scope="col">Inventory Attribute</th><th align="left" valign="top" id="idm44898772155696" scope="col">Example Value</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm44898772156784">
 										<p>
 											<code class="literal">numa.nodeAffinity</code>
 										</p>
-										</td><td align="left" valign="top" headers="idm45215907135952">
+										</td><td align="left" valign="top" headers="idm44898772155696">
 										<p>
 											<code class="literal">["True"]</code> or <code class="literal">[]</code> (empty list if not configured)
 										</p>
@@ -4530,12 +4530,12 @@ EOF</pre><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li clas
 								</li><li class="listitem">
 									Hook execution: An Ansible Playbook that is provided as part of a migration hook is mounted into the hook container as a <code class="literal">ConfigMap</code>. The hook container is run as a job on the relevant cluster in the <code class="literal">openshift-mtv</code> namespace. When you add a hook, you must specify the name of the hook and whether it is a pre-migration hook or a post-migration hook.
 								</li><li class="listitem">
-									Service account: You can optionally specify a service account when adding a hook. When you add a hook by using the Red Hat OpenShift web console, you can specify the service account name in the <span class="strong strong"><strong>Service account</strong></span> field when creating or editing the migration plan. When you add a hook by using the CLI, you can specify the service account in the <code class="literal">Hook</code> CR. If you specify a service account, it must have the appropriate RBAC permissions to manage cluster resources and at least write access for the namespace you are working in.
+									Service account: You can optionally specify a service account when adding a hook. When you add a hook by using the Red Hat OpenShift web console, you can specify the service account name in the <span class="strong strong"><strong>Service account</strong></span> field when creating or editing the migration plan. When you add a hook by using the CLI, you can specify the service account in the <code class="literal">Hook</code> CR. If you specify a service account, it must have the appropriate RBAC permissions to manage cluster resources and at least write access for the <code class="literal">openshift-mtv</code> namespace where hooks execute.
 								</li></ul></div></dd></dl></div><div class="admonition important"><div class="admonition_header">Important</div><div><p>
 					For a hook to run on a VM, the VM must be started and available using SSH.
 				</p></div></div><section class="section" id="migration-hook-workflow_mtv"><div class="titlepage"><div><div><h3 class="title">7.3.1. Migration hook workflow</h3></div></div></div><p class="_abstract _abstract">
 					The illustration that follows shows the general process of using a migration hook.
-				</p><div class="figure" id="idm45215906421968"><p class="title"><strong>Figure 7.1. Adding a hook to a migration plan</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/modules/images/migration_hook_process.png" alt="Adding a hook to a migration plan"/></div></div></div><p>
+				</p><div class="figure" id="idm44898776487040"><p class="title"><strong>Figure 7.1. Adding a hook to a migration plan</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/modules/images/migration_hook_process.png" alt="Adding a hook to a migration plan"/></div></div></div><p>
 					<span class="strong strong"><strong>Process:</strong></span>
 				</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
 							Input your Ansible hook and credentials.
@@ -4582,7 +4582,7 @@ EOF</pre><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li clas
 						</li><li class="listitem">
 							File containing the <code class="literal">Secret</code> for the source provider.
 						</li><li class="listitem">
-							(Optional) Red Hat OpenShift service account called by the hook. The service account must have at least write access for the namespace you are working in. For information about creating a service account, see <a class="link" href="https://docs.openshift.com/container-platform/4.20/authentication/understanding-and-creating-service-accounts.html">Understanding and creating service accounts</a>.
+							(Optional) Red Hat OpenShift service account called by the hook. The service account must have at least write access for the <code class="literal">openshift-mtv</code> namespace where hooks execute. For information about creating a service account, see <a class="link" href="https://docs.openshift.com/container-platform/4.20/authentication/understanding-and-creating-service-accounts.html">Understanding and creating service accounts</a>.
 						</li><li class="listitem">
 							SSH access for VMs you want to migrate with the public key installed on the VMs.
 						</li><li class="listitem">
@@ -4598,7 +4598,7 @@ EOF</pre><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li clas
 								</li><li class="listitem">
 									Enter the <span class="strong strong"><strong>Hook runner image</strong></span>. If you are specifying the <code class="literal">spec.playbook</code>, you need to use an image that has an <code class="literal">ansible-runner</code>.
 								</li><li class="listitem">
-									Optional: Enter the <span class="strong strong"><strong>Service account</strong></span> name. The service account must have the necessary RBAC permissions to manage cluster resources from the hook pod.
+									Optional: Enter the <span class="strong strong"><strong>Service account</strong></span> name. The service account must have the necessary RBAC permissions to manage cluster resources and at least write access for the <code class="literal">openshift-mtv</code> namespace where hooks execute.
 								</li><li class="listitem">
 									Paste your hook as a YAML file in the <span class="strong strong"><strong>Ansible playbook</strong></span> text box.
 								</li></ol></div></li><li class="listitem"><p class="simpara">
@@ -4608,7 +4608,7 @@ EOF</pre><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li clas
 								</li><li class="listitem">
 									Enter the <span class="strong strong"><strong>Hook runner image</strong></span>. If you are specifying the <code class="literal">spec.playbook</code>, you need to use an image that has an <code class="literal">ansible-runner</code>.
 								</li><li class="listitem">
-									Optional: Enter the <span class="strong strong"><strong>Service account</strong></span> name. The service account must have the necessary RBAC permissions to manage cluster resources from the hook pod.
+									Optional: Enter the <span class="strong strong"><strong>Service account</strong></span> name. The service account must have the necessary RBAC permissions to manage cluster resources and at least write access for the <code class="literal">openshift-mtv</code> namespace where hooks execute.
 								</li><li class="listitem">
 									Paste your hook as a YAML file in the <span class="strong strong"><strong>Ansible playbook</strong></span> text box.
 								</li></ol></div></li><li class="listitem"><p class="simpara">
@@ -4671,7 +4671,7 @@ EOF</pre><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li clas
 						</li><li class="listitem">
 							File containing the Secret for the source provider.
 						</li><li class="listitem">
-							(Optional) Red Hat OpenShift service account called by the hook. The service account must have at least write access for the namespace you are working in. For information about creating a service account, see <a class="link" href="https://docs.openshift.com/container-platform/4.20/authentication/understanding-and-creating-service-accounts.html">Understanding and creating service accounts</a>.
+							(Optional) Red Hat OpenShift service account called by the hook. The service account must have at least write access for the <code class="literal">openshift-mtv</code> namespace where hooks execute. For information about creating a service account, see <a class="link" href="https://docs.openshift.com/container-platform/4.20/authentication/understanding-and-creating-service-accounts.html">Understanding and creating service accounts</a>.
 						</li><li class="listitem">
 							SSH access for VMs you want to migrate with the public key installed on the VMs.
 						</li><li class="listitem">
@@ -5384,111 +5384,111 @@ EOF</pre><p class="simpara">
 						<a class="link" href="https://docs.redhat.com/en/documentation/migration_toolkit_for_virtualization/2.10/html/planning_your_migration_to_red_hat_openshift_virtualization/assembly_cold-warm-migration_mtv#about-cold-warm-migration_mtv">About cold and warm migration</a>
 					</li></ul></div></section><section class="section" id="error-messages_mtv"><div class="titlepage"><div><div><h2 class="title">10.3. Error messages</h2></div></div></div><p class="_abstract _abstract">
 				Review common error messages encountered during migration. For detailed resolution steps, see the linked troubleshooting procedures.
-			</p><div class="table" id="idm45215903643616"><p class="title"><strong>Table 10.1. Common migration error messages</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 33%; " class="col_1"/><col style="width: 50%; " class="col_2"/><col style="width: 17%; " class="col_3"/></colgroup><thead><tr><th align="left" valign="top" id="idm45215903637840" scope="col">Error message</th><th align="left" valign="top" id="idm45215903636752" scope="col">Description</th><th align="left" valign="top" id="idm45215903635664" scope="col">Resolution</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45215903637840">
+			</p><div class="table" id="idm44898774305488"><p class="title"><strong>Table 10.1. Common migration error messages</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 33%; " class="col_1"/><col style="width: 50%; " class="col_2"/><col style="width: 17%; " class="col_3"/></colgroup><thead><tr><th align="left" valign="top" id="idm44898774299712" scope="col">Error message</th><th align="left" valign="top" id="idm44898774298624" scope="col">Description</th><th align="left" valign="top" id="idm44898774297536" scope="col">Resolution</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm44898774299712">
 							<p>
 								<code class="literal">warm import retry limit reached</code>
 							</p>
-							</td><td align="left" valign="top" headers="idm45215903636752">
+							</td><td align="left" valign="top" headers="idm44898774298624">
 							<p>
 								Displayed during a warm migration when a VMware virtual machine (VM) has reached the maximum number (28) of changed block tracking (CBT) snapshots during the precopy stage.
 							</p>
-							</td><td align="left" valign="top" headers="idm45215903635664">
+							</td><td align="left" valign="top" headers="idm44898774297536">
 							<p>
 								<a class="link" href="#proc_troubleshooting-warm-import-retry-limit_mtv" title="10.3.1. Resolving warm import retry limit errors">Resolving warm import retry limit errors</a>
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm45215903637840">
+							</td></tr><tr><td align="left" valign="top" headers="idm44898774299712">
 							<p>
 								<code class="literal">Unable to resize disk image to required size</code>
 							</p>
-							</td><td align="left" valign="top" headers="idm45215903636752">
+							</td><td align="left" valign="top" headers="idm44898774298624">
 							<p>
 								Displayed when migration fails because a virtual machine on the target provider uses persistent volumes with an EXT4 file system on block storage. The default file system overhead assumed by CDI does not include the reserved space for the root partition.
 							</p>
-							</td><td align="left" valign="top" headers="idm45215903635664">
+							</td><td align="left" valign="top" headers="idm44898774297536">
 							<p>
 								<a class="link" href="#proc_troubleshooting-resize-disk-image_mtv" title="10.3.2. Resolving disk resize errors">Resolving disk resize errors</a>
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm45215903637840">
+							</td></tr><tr><td align="left" valign="top" headers="idm44898774299712">
 							<p>
 								<code class="literal">An error occurred while taking a snapshot: Failed to restart the virtual machine</code>
 							</p>
-							</td><td align="left" valign="top" headers="idm45215903636752">
+							</td><td align="left" valign="top" headers="idm44898774298624">
 							<p>
 								Displayed during warm migration of Microsoft Windows VMs when the Volume Shadow Copy Service (VSS) is not running on the guest operating system.
 							</p>
-							</td><td align="left" valign="top" headers="idm45215903635664">
+							</td><td align="left" valign="top" headers="idm44898774297536">
 							<p>
 								<a class="link" href="https://docs.redhat.com/en/documentation/migration_toolkit_for_virtualization/2.10/html/planning_your_migration_to_red_hat_openshift_virtualization/assembly_provider-specific-requirements-for-migration_mtv#vmware-prerequisites_mtv">VMware prerequisites</a>
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm45215903637840">
+							</td></tr><tr><td align="left" valign="top" headers="idm44898774299712">
 							<p>
 								<code class="literal">ConnectionTestFailed</code>
 							</p>
-							</td><td align="left" valign="top" headers="idm45215903636752">
+							</td><td align="left" valign="top" headers="idm44898774298624">
 							<p>
 								Displayed when creating an Open Virtual Appliance (OVA) provider. Error messages might appear before the provider status changes to <code class="literal">Ready</code>.
 							</p>
-							</td><td align="left" valign="top" headers="idm45215903635664">
+							</td><td align="left" valign="top" headers="idm44898774297536">
 							<p>
 								<a class="link" href="#proc_troubleshooting-connection-test-failed-ova_mtv" title="10.3.3. Resolving OVA connection test errors">Resolving OVA connection test errors</a>
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm45215903637840">
+							</td></tr><tr><td align="left" valign="top" headers="idm44898774299712">
 							<p>
 								<code class="literal">Error pulling VDDK image</code>
 							</p>
-							</td><td align="left" valign="top" headers="idm45215903636752">
+							</td><td align="left" valign="top" headers="idm44898774298624">
 							<p>
 								Displayed when a provider in a namespace different from <code class="literal">openshift-mtv</code> cannot access the VDDK image.
 							</p>
-							</td><td align="left" valign="top" headers="idm45215903635664">
+							</td><td align="left" valign="top" headers="idm44898774297536">
 							<p>
 								<a class="link" href="#proc_troubleshooting-vddk-image-pull-error_mtv" title="10.3.4. Resolving VDDK image pull errors">Resolving VDDK image pull errors</a>
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm45215903637840">
+							</td></tr><tr><td align="left" valign="top" headers="idm44898774299712">
 							<p>
 								<code class="literal">Manual SSH key configuration required</code>, <code class="literal">Failed to connect via SSH</code>, or <code class="literal">SSH connection timeout</code>
 							</p>
-							</td><td align="left" valign="top" headers="idm45215903636752">
+							</td><td align="left" valign="top" headers="idm44898774298624">
 							<p>
 								Displayed when MTV cannot establish an SSH connection to the ESXi host during storage copy offload operations.
 							</p>
-							</td><td align="left" valign="top" headers="idm45215903635664">
+							</td><td align="left" valign="top" headers="idm44898774297536">
 							<p>
 								<a class="link" href="#con_troubleshooting-storage-copy-offload_mtv" title="10.4. Troubleshooting storage copy offload">Troubleshooting storage copy offload</a>
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm45215903637840">
+							</td></tr><tr><td align="left" valign="top" headers="idm44898774299712">
 							<p>
 								<code class="literal">VM name validation failed: Invalid DNS name</code>
 							</p>
-							</td><td align="left" valign="top" headers="idm45215903636752">
+							</td><td align="left" valign="top" headers="idm44898774298624">
 							<p>
 								Displayed when a source VM name does not comply with Kubernetes DNS naming requirements.
 							</p>
-							</td><td align="left" valign="top" headers="idm45215903635664">
+							</td><td align="left" valign="top" headers="idm44898774297536">
 							<p>
 								<a class="link" href="https://docs.redhat.com/en/documentation/migration_toolkit_for_virtualization/2.10/html/planning_your_migration_to_red_hat_openshift_virtualization/assembly_migrating-vms-web-console_mtv#proc_renaming-vms-for-migration_mtv">Renaming virtual machines</a>
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm45215903637840">
+							</td></tr><tr><td align="left" valign="top" headers="idm44898774299712">
 							<p>
 								<code class="literal">Cannot derive SVM to use; please specify SVM in config file</code>
 							</p>
-							</td><td align="left" valign="top" headers="idm45215903636752">
+							</td><td align="left" valign="top" headers="idm44898774298624">
 							<p>
 								Displayed during storage copy offload operations with NetApp storage when ONTAP is not configured correctly.
 							</p>
-							</td><td align="left" valign="top" headers="idm45215903635664">
+							</td><td align="left" valign="top" headers="idm44898774297536">
 							<p>
 								<a class="link" href="#con_troubleshooting-storage-copy-offload_mtv" title="10.4. Troubleshooting storage copy offload">Troubleshooting storage copy offload</a>
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm45215903637840">
+							</td></tr><tr><td align="left" valign="top" headers="idm44898774299712">
 							<p>
 								<code class="literal">Migration failed: VDDK image required for vSAN storage</code>
 							</p>
-							</td><td align="left" valign="top" headers="idm45215903636752">
+							</td><td align="left" valign="top" headers="idm44898774298624">
 							<p>
 								Displayed when a VM is backed by VMware vSAN storage and no VDDK image is configured. VDDK is mandatory for vSAN migrations.
 							</p>
-							</td><td align="left" valign="top" headers="idm45215903635664">
+							</td><td align="left" valign="top" headers="idm44898774297536">
 							<p>
 								<a class="link" href="#proc_troubleshooting-vddk-required-vsan_mtv" title="10.3.5. Resolving VDDK vSAN errors">Resolving VDDK vSAN errors</a>
 							</p>
@@ -5921,245 +5921,245 @@ EOF</pre><p class="simpara">
 					The results show that migration time is linear when increasing the total VMs (50 GiB disk, Utilization 70%).
 				</p><p>
 					The optimal number of VMs per ESXi is 10.
-				</p><div class="table" id="idm45215904570960"><p class="title"><strong>Table 11.1. Single ESXi host tests</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 45%; " class="col_1"/><col style="width: 9%; " class="col_2"/><col style="width: 9%; " class="col_3"/><col style="width: 13%; " class="col_4"/><col style="width: 12%; " class="col_5"/><col style="width: 12%; " class="col_6"/></colgroup><thead><tr><th align="left" valign="top" id="idm45215904561680" scope="col">Test Case Description</th><th align="left" valign="top" id="idm45215904560592" scope="col">MTV</th><th align="left" valign="top" id="idm45215904559504" scope="col">VDDK</th><th align="left" valign="top" id="idm45215904558416" scope="col">max_vm inflight</th><th align="left" valign="top" id="idm45215904557328" scope="col">Migration Type</th><th align="left" valign="top" id="idm45215904556240" scope="col">Total Duration</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45215904561680">
+				</p><div class="table" id="idm44898776195280"><p class="title"><strong>Table 11.1. Single ESXi host tests</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 45%; " class="col_1"/><col style="width: 9%; " class="col_2"/><col style="width: 9%; " class="col_3"/><col style="width: 13%; " class="col_4"/><col style="width: 12%; " class="col_5"/><col style="width: 12%; " class="col_6"/></colgroup><thead><tr><th align="left" valign="top" id="idm44898776186000" scope="col">Test Case Description</th><th align="left" valign="top" id="idm44898776184912" scope="col">MTV</th><th align="left" valign="top" id="idm44898776183824" scope="col">VDDK</th><th align="left" valign="top" id="idm44898776182736" scope="col">max_vm inflight</th><th align="left" valign="top" id="idm44898776181648" scope="col">Migration Type</th><th align="left" valign="top" id="idm44898776180560" scope="col">Total Duration</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm44898776186000">
 								<p>
 									Cold migration, 10 VMs, Single ESXi, Private Network (non-management network)
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904560592">
+								</td><td align="left" valign="top" headers="idm44898776184912">
 								<p>
 									2.6
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904559504">
+								</td><td align="left" valign="top" headers="idm44898776183824">
 								<p>
 									7.0.3
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904558416">
+								</td><td align="left" valign="top" headers="idm44898776182736">
 								<p>
 									100
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904557328">
+								</td><td align="left" valign="top" headers="idm44898776181648">
 								<p>
 									cold
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904556240">
+								</td><td align="left" valign="top" headers="idm44898776180560">
 								<p>
 									0:21:39
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215904561680">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898776186000">
 								<p>
 									cold migration, 20 VMs, Single ESXi, Private Network
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904560592">
+								</td><td align="left" valign="top" headers="idm44898776184912">
 								<p>
 									2.6
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904559504">
+								</td><td align="left" valign="top" headers="idm44898776183824">
 								<p>
 									7.0.3
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904558416">
+								</td><td align="left" valign="top" headers="idm44898776182736">
 								<p>
 									100
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904557328">
+								</td><td align="left" valign="top" headers="idm44898776181648">
 								<p>
 									cold
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904556240">
+								</td><td align="left" valign="top" headers="idm44898776180560">
 								<p>
 									0:41:16
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215904561680">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898776186000">
 								<p>
 									Cold migration, 30 VMs, Single ESXi, Private Network
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904560592">
+								</td><td align="left" valign="top" headers="idm44898776184912">
 								<p>
 									2.6
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904559504">
+								</td><td align="left" valign="top" headers="idm44898776183824">
 								<p>
 									7.0.3
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904558416">
+								</td><td align="left" valign="top" headers="idm44898776182736">
 								<p>
 									100
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904557328">
+								</td><td align="left" valign="top" headers="idm44898776181648">
 								<p>
 									cold
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904556240">
+								</td><td align="left" valign="top" headers="idm44898776180560">
 								<p>
 									1:00:59
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215904561680">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898776186000">
 								<p>
 									Cold migration, 40 VMs, Single ESXi, Private Network
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904560592">
+								</td><td align="left" valign="top" headers="idm44898776184912">
 								<p>
 									2.6
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904559504">
+								</td><td align="left" valign="top" headers="idm44898776183824">
 								<p>
 									7.0.3
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904558416">
+								</td><td align="left" valign="top" headers="idm44898776182736">
 								<p>
 									100
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904557328">
+								</td><td align="left" valign="top" headers="idm44898776181648">
 								<p>
 									cold
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904556240">
+								</td><td align="left" valign="top" headers="idm44898776180560">
 								<p>
 									1:23:02
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215904561680">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898776186000">
 								<p>
 									Cold migration, 50 VMs, Single ESXi, Private Network
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904560592">
+								</td><td align="left" valign="top" headers="idm44898776184912">
 								<p>
 									2.6
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904559504">
+								</td><td align="left" valign="top" headers="idm44898776183824">
 								<p>
 									7.0.3
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904558416">
+								</td><td align="left" valign="top" headers="idm44898776182736">
 								<p>
 									100
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904557328">
+								</td><td align="left" valign="top" headers="idm44898776181648">
 								<p>
 									cold
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904556240">
+								</td><td align="left" valign="top" headers="idm44898776180560">
 								<p>
 									1:46:24
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215904561680">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898776186000">
 								<p>
 									Cold migration, 80 VMs, Single ESXi, Private Network
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904560592">
+								</td><td align="left" valign="top" headers="idm44898776184912">
 								<p>
 									2.6
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904559504">
+								</td><td align="left" valign="top" headers="idm44898776183824">
 								<p>
 									7.0.3
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904558416">
+								</td><td align="left" valign="top" headers="idm44898776182736">
 								<p>
 									100
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904557328">
+								</td><td align="left" valign="top" headers="idm44898776181648">
 								<p>
 									cold
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904556240">
+								</td><td align="left" valign="top" headers="idm44898776180560">
 								<p>
 									2:42:49
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215904561680">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898776186000">
 								<p>
 									Cold migration, 100 VMs, Single ESXi, Private Network
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904560592">
+								</td><td align="left" valign="top" headers="idm44898776184912">
 								<p>
 									2.6
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904559504">
+								</td><td align="left" valign="top" headers="idm44898776183824">
 								<p>
 									7.0.3
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904558416">
+								</td><td align="left" valign="top" headers="idm44898776182736">
 								<p>
 									100
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904557328">
+								</td><td align="left" valign="top" headers="idm44898776181648">
 								<p>
 									cold
 								</p>
-								</td><td align="left" valign="top" headers="idm45215904556240">
+								</td><td align="left" valign="top" headers="idm44898776180560">
 								<p>
 									3:25:15
 								</p>
 								</td></tr></tbody></table></div></div></section><section class="section" id="mtv-multiple-esxi-host-performance_mtv"><div class="titlepage"><div><div><h3 class="title">11.4.2. Multiple ESXi hosts and a single data store</h3></div></div></div><p>
 					In each iteration, the number of ESXi hosts was increased, to show that increasing the number of ESXi hosts improves the migration time (50 GiB disk, Utilization 70%).
-				</p><div class="table" id="idm45215905867136"><p class="title"><strong>Table 11.2. Multiple ESXi hosts and single data store</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 45%; " class="col_1"/><col style="width: 9%; " class="col_2"/><col style="width: 9%; " class="col_3"/><col style="width: 13%; " class="col_4"/><col style="width: 12%; " class="col_5"/><col style="width: 12%; " class="col_6"/></colgroup><thead><tr><th align="left" valign="top" id="idm45215903940160" scope="col">Test Case Description</th><th align="left" valign="top" id="idm45215903939072" scope="col">MTV</th><th align="left" valign="top" id="idm45215903937984" scope="col">VDDK</th><th align="left" valign="top" id="idm45215903936896" scope="col">max_vm inflight</th><th align="left" valign="top" id="idm45215903935808" scope="col">Migration Type</th><th align="left" valign="top" id="idm45215903934720" scope="col">Total Duration</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45215903940160">
+				</p><div class="table" id="idm44898772886176"><p class="title"><strong>Table 11.2. Multiple ESXi hosts and single data store</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 45%; " class="col_1"/><col style="width: 9%; " class="col_2"/><col style="width: 9%; " class="col_3"/><col style="width: 13%; " class="col_4"/><col style="width: 12%; " class="col_5"/><col style="width: 12%; " class="col_6"/></colgroup><thead><tr><th align="left" valign="top" id="idm44898772876864" scope="col">Test Case Description</th><th align="left" valign="top" id="idm44898772875776" scope="col">MTV</th><th align="left" valign="top" id="idm44898772874688" scope="col">VDDK</th><th align="left" valign="top" id="idm44898772873600" scope="col">max_vm inflight</th><th align="left" valign="top" id="idm44898772872512" scope="col">Migration Type</th><th align="left" valign="top" id="idm44898772871424" scope="col">Total Duration</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm44898772876864">
 								<p>
 									Cold migration, 100 VMs, Single ESXi, Private Network (non-management network)
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903939072">
+								</td><td align="left" valign="top" headers="idm44898772875776">
 								<p>
 									2.6
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903937984">
+								</td><td align="left" valign="top" headers="idm44898772874688">
 								<p>
 									7.0.3
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903936896">
+								</td><td align="left" valign="top" headers="idm44898772873600">
 								<p>
 									100
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903935808">
+								</td><td align="left" valign="top" headers="idm44898772872512">
 								<p>
 									cold
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903934720">
+								</td><td align="left" valign="top" headers="idm44898772871424">
 								<p>
 									3:25:15
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215903940160">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898772876864">
 								<p>
 									Cold migration, 100 VMs, 4 ESXs (25 VMs per ESX), Private Network
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903939072">
+								</td><td align="left" valign="top" headers="idm44898772875776">
 								<p>
 									2.6
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903937984">
+								</td><td align="left" valign="top" headers="idm44898772874688">
 								<p>
 									7.0.3
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903936896">
+								</td><td align="left" valign="top" headers="idm44898772873600">
 								<p>
 									100
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903935808">
+								</td><td align="left" valign="top" headers="idm44898772872512">
 								<p>
 									cold
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903934720">
+								</td><td align="left" valign="top" headers="idm44898772871424">
 								<p>
 									1:22:27
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm45215903940160">
+								</td></tr><tr><td align="left" valign="top" headers="idm44898772876864">
 								<p>
 									Cold migration, 100 VMs, 5 ESXs (20 VMs per ESX), Private Network, 1 Data Store
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903939072">
+								</td><td align="left" valign="top" headers="idm44898772875776">
 								<p>
 									2.6
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903937984">
+								</td><td align="left" valign="top" headers="idm44898772874688">
 								<p>
 									7.0.3
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903936896">
+								</td><td align="left" valign="top" headers="idm44898772873600">
 								<p>
 									100
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903935808">
+								</td><td align="left" valign="top" headers="idm44898772872512">
 								<p>
 									cold
 								</p>
-								</td><td align="left" valign="top" headers="idm45215903934720">
+								</td><td align="left" valign="top" headers="idm44898772871424">
 								<p>
 									1:04:57
 								</p>
@@ -6167,75 +6167,75 @@ EOF</pre><p class="simpara">
 				In each test, the <code class="literal">Migration Network</code> was changed, by using the <span class="strong strong"><strong>Provider</strong></span>, to find the fastest network for migration.
 			</p><p>
 				The results indicate that there is no degradation by using management compared to non-management networks when all interfaces and network speeds are the same.
-			</p><div class="table" id="idm45215903898112"><p class="title"><strong>Table 11.3. Different migration network tests</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 45%; " class="col_1"/><col style="width: 9%; " class="col_2"/><col style="width: 9%; " class="col_3"/><col style="width: 13%; " class="col_4"/><col style="width: 12%; " class="col_5"/><col style="width: 12%; " class="col_6"/></colgroup><thead><tr><th align="left" valign="top" id="idm45215904090256" scope="col">Test Case Description</th><th align="left" valign="top" id="idm45215904089168" scope="col">MTV</th><th align="left" valign="top" id="idm45215904088080" scope="col">VDDK</th><th align="left" valign="top" id="idm45215904086992" scope="col">max_vm inflight</th><th align="left" valign="top" id="idm45215904085904" scope="col">Migration Type</th><th align="left" valign="top" id="idm45215904084816" scope="col">Total Duration</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45215904090256">
+			</p><div class="table" id="idm44898775417360"><p class="title"><strong>Table 11.3. Different migration network tests</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 45%; " class="col_1"/><col style="width: 9%; " class="col_2"/><col style="width: 9%; " class="col_3"/><col style="width: 13%; " class="col_4"/><col style="width: 12%; " class="col_5"/><col style="width: 12%; " class="col_6"/></colgroup><thead><tr><th align="left" valign="top" id="idm44898775408064" scope="col">Test Case Description</th><th align="left" valign="top" id="idm44898775406976" scope="col">MTV</th><th align="left" valign="top" id="idm44898775405888" scope="col">VDDK</th><th align="left" valign="top" id="idm44898775404800" scope="col">max_vm inflight</th><th align="left" valign="top" id="idm44898775403712" scope="col">Migration Type</th><th align="left" valign="top" id="idm44898775402624" scope="col">Total Duration</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm44898775408064">
 							<p>
 								Cold migration, 10 VMs, Single ESXi, MGMT Network
 							</p>
-							</td><td align="left" valign="top" headers="idm45215904089168">
+							</td><td align="left" valign="top" headers="idm44898775406976">
 							<p>
 								2.6
 							</p>
-							</td><td align="left" valign="top" headers="idm45215904088080">
+							</td><td align="left" valign="top" headers="idm44898775405888">
 							<p>
 								7.0.3
 							</p>
-							</td><td align="left" valign="top" headers="idm45215904086992">
+							</td><td align="left" valign="top" headers="idm44898775404800">
 							<p>
 								100
 							</p>
-							</td><td align="left" valign="top" headers="idm45215904085904">
+							</td><td align="left" valign="top" headers="idm44898775403712">
 							<p>
 								cold
 							</p>
-							</td><td align="left" valign="top" headers="idm45215904084816">
+							</td><td align="left" valign="top" headers="idm44898775402624">
 							<p>
 								0:21:30
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm45215904090256">
+							</td></tr><tr><td align="left" valign="top" headers="idm44898775408064">
 							<p>
 								Cold migration, 10 VMs, Single ESXi, Private Network (non-management network)
 							</p>
-							</td><td align="left" valign="top" headers="idm45215904089168">
+							</td><td align="left" valign="top" headers="idm44898775406976">
 							<p>
 								2.6
 							</p>
-							</td><td align="left" valign="top" headers="idm45215904088080">
+							</td><td align="left" valign="top" headers="idm44898775405888">
 							<p>
 								7.0.3
 							</p>
-							</td><td align="left" valign="top" headers="idm45215904086992">
+							</td><td align="left" valign="top" headers="idm44898775404800">
 							<p>
 								20
 							</p>
-							</td><td align="left" valign="top" headers="idm45215904085904">
+							</td><td align="left" valign="top" headers="idm44898775403712">
 							<p>
 								cold
 							</p>
-							</td><td align="left" valign="top" headers="idm45215904084816">
+							</td><td align="left" valign="top" headers="idm44898775402624">
 							<p>
 								0:21:20
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm45215904090256">
+							</td></tr><tr><td align="left" valign="top" headers="idm44898775408064">
 							<p>
 								Cold migration, 10 VMs, Single ESXi, Default Network
 							</p>
-							</td><td align="left" valign="top" headers="idm45215904089168">
+							</td><td align="left" valign="top" headers="idm44898775406976">
 							<p>
 								2.6.2
 							</p>
-							</td><td align="left" valign="top" headers="idm45215904088080">
+							</td><td align="left" valign="top" headers="idm44898775405888">
 							<p>
 								7.0.3
 							</p>
-							</td><td align="left" valign="top" headers="idm45215904086992">
+							</td><td align="left" valign="top" headers="idm44898775404800">
 							<p>
 								20
 							</p>
-							</td><td align="left" valign="top" headers="idm45215904085904">
+							</td><td align="left" valign="top" headers="idm44898775403712">
 							<p>
 								cold
 							</p>
-							</td><td align="left" valign="top" headers="idm45215904084816">
+							</td><td align="left" valign="top" headers="idm44898775402624">
 							<p>
 								0:21:30
 							</p>
@@ -6518,7 +6518,7 @@ virt_v2v_extra_conf_config_map: "`perf`"</pre></li></ol></div></li><li class="li
 					Plan ID: The ID number of the migration plan. The number is assigned by MTV.
 				</li></ul></div><p>
 			Metrics are calculated every 10 seconds and are reported per week, per month, and per year.
-		</p></section><div><div xml:lang="en-US" class="legalnotice" id="idm45215904725248"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		</p></section><div><div xml:lang="en-US" class="legalnotice" id="idm44898773621920"><h1 class="legalnotice">Legal Notice</h1><div class="para">
 		Copyright <span class="trademark"/>© 2026 Red Hat, Inc.
 	</div><div class="para">
 		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri" href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.

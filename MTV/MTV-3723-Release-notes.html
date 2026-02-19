@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" class="chrometwo"><head><title>Release notes</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css"/><meta name="generator" content="publican v4.3.2"/><meta name="description" content="Review new features, known issues, and resolved issues for Migration Toolkit for Virtualization 2.11."/><link rel="next" href="#rn-2-11_release-notes" title="Chapter 1. Migration Toolkit for Virtualization 2.11"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type="text/javascript" src="Common_Content/scripts/jquery-1.7.1.min.js"> </script><script type="text/javascript" src="Common_Content/scripts/utils.js"> </script><script type="text/javascript" src="Common_Content/scripts/highlight.js/highlight.pack.js"> </script></head><body><div id="chrometwo"><div id="main"><div xml:lang="en-US" class="book" id="idm46455004718144"><div class="titlepage"><div><div class="producttitle"><span class="productname">Migration Toolkit for Virtualization</span> <span class="productnumber">2.11</span></div><div><h1 class="title">Release notes</h1></div><div><h2 class="subtitle">Release notes for the Migration Toolkit for Virtualization 2.11 release</h2></div><div><div xml:lang="en-US" class="authorgroup"><div class="author"><h3 class="author"><span class="firstname">Red Hat Modernization and Migration</span> <span class="surname">Documentation Team</span></h3><code class="email"><a class="email" href="mailto:ccs-mms-docs@redhat.com">ccs-mms-docs@redhat.com</a></code></div></div></div><div><a href="#idm46454982732688">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+<html xmlns="http://www.w3.org/1999/xhtml" class="chrometwo"><head><title>Release notes</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css"/><meta name="generator" content="publican v4.3.2"/><meta name="description" content="Review new features, known issues, and resolved issues for Migration Toolkit for Virtualization 2.11."/><link rel="next" href="#rn-2-11_release-notes" title="Chapter 1. Migration Toolkit for Virtualization 2.11"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type="text/javascript" src="Common_Content/scripts/jquery-1.7.1.min.js"> </script><script type="text/javascript" src="Common_Content/scripts/utils.js"> </script><script type="text/javascript" src="Common_Content/scripts/highlight.js/highlight.pack.js"> </script></head><body><div id="chrometwo"><div id="main"><div xml:lang="en-US" class="book" id="idm46393080242512"><div class="titlepage"><div><div class="producttitle"><span class="productname">Migration Toolkit for Virtualization</span> <span class="productnumber">2.11</span></div><div><h1 class="title">Release notes</h1></div><div><h2 class="subtitle">Release notes for the Migration Toolkit for Virtualization 2.11 release</h2></div><div><div xml:lang="en-US" class="authorgroup"><div class="author"><h3 class="author"><span class="firstname">Red Hat Modernization and Migration</span> <span class="surname">Documentation Team</span></h3><code class="email"><a class="email" href="mailto:ccs-mms-docs@redhat.com">ccs-mms-docs@redhat.com</a></code></div></div></div><div><a href="#idm46393063796704">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
 				Review new features, known issues, and resolved issues for Migration Toolkit for Virtualization 2.11.
 			</div></div></div></div><hr/></div><div class="toc"><ul class="toc"><li><span class="chapter"><a href="#rn-2-11_release-notes">1. Migration Toolkit for Virtualization 2.11</a></span><ul><li><span class="section"><a href="#new-features-and-enhancements-2-11_release-notes">1.1. New features and enhancements</a></span></li><li><span class="section"><a href="#rn-resolved-issues_release-notes">1.2. Resolved issues</a></span><ul><li><span class="section"><a href="#resolved-issues-2-11-0_release-notes">1.2.1. Resolved issues 2.11.0</a></span></li></ul></li><li><span class="section"><a href="#known-issues-2-11_release-notes">1.3. Known issues</a></span></li></ul></li></ul></div><section class="chapter" id="rn-2-11_release-notes"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Migration Toolkit for Virtualization 2.11</h1></div></div></div><p class="_abstract _abstract">
 			The release notes describe technical changes, new features and enhancements, known issues, and resolved issues.
@@ -42,11 +42,15 @@
 							MTV 2.11.0 enhances data integrity during VM migration by using features introduced in RHEL 10.1. This release introduces filesystem-level consistency checks, improved system error handling, and internal diagnostics. Warm migration and features like storage offload minimize downtime with efficient disk migration and data transfer.
 						</p><p class="simpara">
 							<a class="link" href="https://issues.redhat.com/browse/MTV-3906">MTV-3906</a>
-						</p></dd><dt><span class="term">Technology Preview: Storage Offload Copy optimization for network usage</span></dt><dd><p class="simpara">
-							In MTV 2.11.0, the Storage Offload Copy feature for warm and cold migrations accelerates disk transfer in the storage array by bypassing the network, enabling snapshot creation and base disk copying while the VM is running. Delta changes can be copied over the network post-base disk storage offload copy, reducing the need for VM shutdowns. Storage Offload Copy results in reduced network usage for delta changes, improved overall performance, and enhanced migration efficiency.
-						</p><p class="simpara">
-							<a class="link" href="https://issues.redhat.com/browse/MTV-3710">MTV-3710</a>
-						</p></dd><dt><span class="term">Native alerting with OpenShift monitoring stack</span></dt><dd><p class="simpara">
+						</p></dd><dt><span class="term">Storage Offload Copy</span></dt><dd><p class="simpara">
+							In MTV 2.11.0, the Storage Offload Copy feature accelerates disk transfer in the storage array by bypassing the network, enabling snapshot creation and base disk copying. Storage Offload Copy results in reduced network usage, improved overall performance, and enhanced migration efficiency.
+						</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+									<span class="strong strong"><strong>Technology Preview:</strong></span> Storage Offload Copy for warm migration enables snapshot creation and base disk copying while the VM is running. Delta changes can be copied over the network post-base disk storage offload copy, reducing the need for VM shutdowns.
+								</li><li class="listitem"><p class="simpara">
+									Storage Offload Copy for cold migration is generally available.
+								</p><p class="simpara">
+									<a class="link" href="https://issues.redhat.com/browse/MTV-3710">MTV-3710</a>
+								</p></li></ul></div></dd><dt><span class="term">Native alerting with OpenShift monitoring stack</span></dt><dd><p class="simpara">
 							MTV 2.11.0 introduces native alerting, integrating with OpenShift’s Prometheus-based monitoring stack. Administrators now receive notifications for migration plan failures or critical issues, reducing manual monitoring. Users can configure alerts for email, Slack, or PagerDuty, ensuring timely notifications and minimizing downtime.
 						</p><p class="simpara">
 							<a class="link" href="https://issues.redhat.com/browse/MTV-2529">MTV-2529</a>
@@ -75,9 +79,13 @@
 						</p><p class="simpara">
 							<a class="link" href="https://issues.redhat.com/browse/MTV-3709">MTV-3709</a>
 						</p></dd><dt><span class="term">OS-specific VM configuration for improved performance</span></dt><dd><p class="simpara">
-							With this update, VM owners can configure their VMs based on the specific operating system they are running. This enhancement optimizes VM performance in MTV and reduces the need for manual adjustments, saving time and reducing potential errors.
+							With this update, MTV detects the operating system that VMs are running on automatically. This enhancement optimizes VM performance in MTV and reduces the need for manual adjustments, saving time and reducing potential errors.
 						</p><p class="simpara">
 							<a class="link" href="https://issues.redhat.com/browse/MTV-3963">MTV-3963</a>
+						</p></dd><dt><span class="term">Enhanced IP preservation in VM migration</span></dt><dd><p class="simpara">
+							In MTV 2.11.0, IP preservation for VM migration now verifies that IPs are from the correct subnet before assignment. MTV preserves and assigns IPs from the subnet for VMs with explicitly assigned IPs during migration to OpenShift Virtualization, ensuring accurate IP assignment and preventing IP mismatches during migration.
+						</p><p class="simpara">
+							<a class="link" href="https://issues.redhat.com/browse/MTV-3130">MTV-3130</a>
 						</p></dd></dl></div></section><section class="section" id="rn-resolved-issues_release-notes"><div class="titlepage"><div><div><h2 class="title">1.2. Resolved issues</h2></div></div></div><p class="_abstract _abstract">
 				Migration Toolkit for Virtualization (MTV) 2.11 has the following resolved issues.
 			</p><section class="section" id="resolved-issues-2-11-0_release-notes"><div class="titlepage"><div><div><h3 class="title">1.2.1. Resolved issues 2.11.0</h3></div></div></div><p class="_abstract _abstract">
@@ -146,10 +154,6 @@
 								Before this update, warm migrations with a Red Hat Virtualization provider failed due to missing support for insecure TLS. As a consequence, warm migration failed with TLS insecure (skip cert validation) in MTV 2.8.5. With this release, <code class="literal">InsecureSkipVerify</code> is added to CDI for warm migrations with a RHV provider. As a result, warm migration with TLS insecure (skip cert validation) now succeeds.
 							</p><p class="simpara">
 								<a class="link" href="https://issues.redhat.com/browse/MTV-2811">MTV-2811</a>
-							</p></dd><dt><span class="term">IP preservation improvement in VM migration</span></dt><dd><p class="simpara">
-								Before this update, the IP preservation in VM migration failed to verify if the IP was from the subnet, causing end users to experience IP mismatch during VM migration. With this release, MTV preserves and assigns IPs from the subnet for VMs with explicitly assigned IPs during migration to OpenShift Virtualization. As a result, MTV now ensures VM transfer during migration to OpenShift Virtualization.
-							</p><p class="simpara">
-								<a class="link" href="https://issues.redhat.com/browse/MTV-3130">MTV-3130</a>
 							</p></dd><dt><span class="term">Improved VDDK connection processing for warm migrations from VMware vSphere</span></dt><dd><p class="simpara">
 								Before this update, warm migrations from VMware vSphere intermittently failed during the <code class="literal">Disk transfer</code> phase with a VDDK connection error. With this release, VDDK connection processing is improved, with warm migrations from VMware vSphere now completing successfully during the disk transfer phase.
 							</p><p class="simpara">
@@ -158,10 +162,6 @@
 								Before this update, MTV did not recognize the <code class="literal">VirtualPCNet32</code> network type in VMware during migration. As a consequence, legacy RHEL 5 32-bit VMs were migrated without network interfaces, causing connectivity issues for users. With this release, MTV supports <code class="literal">VirtualPCNet32</code> NICs and detects 32-bit RHEL5 VMs with the <code class="literal">VirtualPCNet32</code> network type, enhancing network interface visibility during migration.
 							</p><p class="simpara">
 								<a class="link" href="https://issues.redhat.com/browse/MTV-3796">MTV-3796</a>
-							</p></dd><dt><span class="term">Accurate identification of FC host objects in FC protocol VM migration</span></dt><dd><p class="simpara">
-								Before this update, FC protocol VM migration failed to identify existing FC host objects in Infinibox due to incorrect adapter ID comparison. As a consequence, FC protocol VM migration failed to identify existing FC hosts, causing volume creation failure. With this update, MTV has implemented active WWPN extraction and comparison for accurate identification of FC host objects during FC protocol VM migration in Infinibox. This enhancement prevents volume creation failure due to incorrect <code class="literal">port_name</code>.
-							</p><p class="simpara">
-								<a class="link" href="https://issues.redhat.com/browse/MTV-4338">MTV-4338</a>
 							</p></dd><dt><span class="term">NVMe disk support for VMware vSphere VM migration validation</span></dt><dd><p class="simpara">
 								Before this update, NVMe disk support was missing for VMware vSphere VM migration, meaning NVMe migration could be successful but not validated. With this update, NVMe disk support is added for successful NVMe migration and validation from VMware vSphere.
 							</p><p class="simpara">
@@ -178,10 +178,6 @@
 								Before this update, the migration of VMs with DHCP settings from an OVA provider to an OpenShift cluster resulted in the loss of interface settings in the VM YAML file, causing only one default interface with a pod network to remain in the VM. As a consequence, users experienced VMs with incorrect interface settings after migration. The issue occurred because the OVA scanner identified NICs and other device types based on the display name, which was unreliable. With this update, device identification is based on the resource type provided in the OVF specification, preserving interface settings during migration and preventing incorrect configurations.
 							</p><p class="simpara">
 								<a class="link" href="https://issues.redhat.com/browse/MTV-3654">MTV-3654</a>
-							</p></dd><dt><span class="term">Hidden <code class="literal">ConnectionTestFailed</code> error messages during OVA provider creation</span></dt><dd><p class="simpara">
-								Before this update, <code class="literal">ConnectionTestFailed</code> error messages were displayed during OVA provider creation, leading to user confusion. With this update, these error messages are hidden during OVA provider creation, providing a clearer user experience when creating an OVA provider.
-							</p><p class="simpara">
-								<a class="link" href="https://issues.redhat.com/browse/MTV-3613">MTV-3613</a>
 							</p></dd></dl></div></section></section><section class="section" id="known-issues-2-11_release-notes"><div class="titlepage"><div><div><h2 class="title">1.3. Known issues</h2></div></div></div><p class="_abstract _abstract">
 				Migration Toolkit for Virtualization (MTV) 2.11 has the following known issues.
 			</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Forklift console plugin fails to load on IPv6-only OpenShift clusters</span></dt><dd><p class="simpara">
@@ -218,6 +214,16 @@
 							When you upload a VMware Virtual Disk Development Kit (VDDK) init image, the image URL is located in the <code class="literal">openshift-mtv</code> namespace. If you create a provider in a different namespace, there is an error when pulling the image.
 						</p><p class="simpara">
 							<a class="link" href="https://issues.redhat.com/browse/MTV-3673">MTV-3673</a>
+						</p></dd><dt><span class="term">Inaccurate <code class="literal">ConnectionTestFailed</code> error messages when creating an OVA provider</span></dt><dd><p class="simpara">
+							When you create an Open Virtual Appliance (OVA) provider in the MTV UI, <code class="literal">ConnectionTestFailed</code> error messages are displayed before the provider status changes to <code class="literal">Ready</code>. The error messages are misleading and do not accurately reflect the in-progress status of the connection.
+						</p><p class="simpara">
+							<a class="link" href="https://issues.redhat.com/browse/MTV-3613">MTV-3613</a>
+						</p></dd><dt><span class="term">Fibre Channel (FC) protocol VM migration fails to identify existing FC host objects in Infinibox</span></dt><dd><p class="simpara">
+							Fibre Channel (FC) protocol VM migration fails to identify existing FC host objects in Infinibox due to incorrect adapter ID comparison. As a consequence, FC protocol VM migration fails to identify existing FC hosts, causing volume creation failure due to incorrect <code class="literal">port_name</code>.
+						</p><p class="simpara">
+							<span class="strong strong"><strong>Workaround:</strong></span> Currently, there is no workaround for this issue.
+						</p><p class="simpara">
+							<a class="link" href="https://issues.redhat.com/browse/MTV-4338">MTV-4338</a>
 						</p></dd><dt><span class="term">Migration stalls during VM migration to OCP with FC</span></dt><dd><p class="simpara">
 							During the migration of VMs to an OpenShift Container Platform (OCP) cluster with Fibre Channel (FC), the migration stalls when attempting to add a transfer network to a target namespace that does not have permissions to the transfer network.
 						</p><p class="simpara">
@@ -230,7 +236,7 @@
 							<span class="strong strong"><strong>Workaround:</strong></span> Delete and restart the pods manually.
 						</p><p class="simpara">
 							<a class="link" href="https://issues.redhat.com/browse/MTV-4413">MTV-4413</a>
-						</p></dd></dl></div></section></section><div><div xml:lang="en-US" class="legalnotice" id="idm46454982732688"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+						</p></dd></dl></div></section></section><div><div xml:lang="en-US" class="legalnotice" id="idm46393063796704"><h1 class="legalnotice">Legal Notice</h1><div class="para">
 		Copyright <span class="trademark"/>© 2026 Red Hat, Inc.
 	</div><div class="para">
 		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri" href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
